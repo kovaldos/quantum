@@ -1,0 +1,120 @@
+extends ../template
+
+block variables
+    - var title = 'Рекламодателям'
+
+block content
+    main.advertiser-page
+        section.page-banner
+            .page-banner__img-wrap
+                img.page-banner__img(src="assets/images/page-banner-min.jpg", alt="Баннер")
+            .page-banner__container.container
+                .breadcrumbs
+                    include ../components/breadcrumbs.pug
+                .page-banner__title-wrap
+                    h1.pages-banner__title.h1 Рекламодателям
+        
+        section.advertisers.layout
+            .layout__top.layout-top
+                .layout__top-banner
+                    img.layout__top-img(src="assets/images/advertiser-banner-min.png", alt="")
+                .layout-top__container.container
+                    .layout-top__text-wrap
+                        h2.layout-top__title Lorem ipsum dolor sit amet, consectetur.
+                        p.layout-top__text Мы подключаем умные экраны с высоким разрешением на такси и корпоративных автомобилях в Санкт-Петербурге. С помощью первой в своем роде медиа-платформы уличного уровня Quantum Advertising Вы можете эффективно охватывать и вовлекать своих клиентов в повседневное путешествие.
+            .layout__list
+                .layout__item.layout__item--right.container
+                    .layout__text-wrap
+                        h3.layout__subtitle.h2 Удаленное управление эфиром и цифровая подпись для каждого ролика
+                        p.layout__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом, на основе таких данных как местоположение, время суток и погода. Получите максимальную выгоду от покупки рекламы с помощью измеримой рентабельности инвестиций, атрибуции и алгоритмических продаж.
+                    .layout__img-wrap
+                        img.layout__img(src="assets/images/advertisers-1-min.png", alt="")
+                .layout__item.layout__item--left.container
+                    .layout__img-wrap
+                        img.layout__img(src="assets/images/advertisers-2-min.png", alt="")
+                    .layout__text-wrap
+                        h3.layout__subtitle.h2 Удаленное управление эфиром и цифровая подпись для каждого ролика
+                        p.layout__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом, на основе таких данных как местоположение, время суток и погода. Получите максимальную выгоду от покупки рекламы с помощью измеримой рентабельности инвестиций, атрибуции и алгоритмических продаж.
+        
+        section.how-works
+            .how-works__container.container
+                h2.how-works__title.h2 Как это работает?
+                p.how-works__text Три клика в личном кабинете до эффективной рекламной кампании
+
+                ul.how-works__list
+                    li.how-works__item
+                        svg(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#target")
+                        h3.how-works__caption Только целевая аудитория
+                        p.how-works__text Выбрать на интерактивной карте города места, где вашааудитория увидит рекламу
+                    li.how-works__item
+                        svg(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#technical-support")
+                        h3.how-works__caption Эффективность
+                        p.how-works__text Запустить рекламную кампанию. Менять параметры и останавливать показы можно в режиме реального времени
+                    li.how-works__item
+                        svg(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#chart")
+                        h3.how-works__caption Точная аналитика
+                        p.how-works__text Используйте собранные MAC-адреса для таргетированной или контекстной рекламы и завершите продажу
+
+        section.advertisers-tabs.tabs
+            .tabs__container.container
+                h2.tabs__title.h2 Почему это работает?
+                .tabs__wrap(data-tab)
+                    .tabs__nav
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="taxi" data-nav-tab="tab-1" checked)
+                            span.tabs__name Геотаргетинг
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="business" data-nav-tab="tab-2")
+                            span.tabs__name Личный кабинет
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="advertiser" data-nav-tab="tab-3")
+                            span.tabs__name Нейросеть
+                    .tabs__content 
+                        ul.tabs__item.tabs-list.active(data-item-tab="tab-1")
+                            li.tabs-list__item
+                                p.tabs-list__text Quantum анализирует геолокацию экрана, время суток и погодные условия. Quantum анализирует геолокацию экрана, время суток и погодные условия
+                        ul.tabs__item.tabs-list(data-item-tab="tab-2")
+                            li.tabs-list__item
+                                p.tabs-list__text Quantum анализирует геолокацию экрана, время суток и погодные условия
+                        ul.tabs__item.tabs-list(data-item-tab="tab-3")
+                            li.tabs-list__item
+                                p.tabs-list__text Quantum анализирует геолокацию экрана, время суток и погодные условия. Quantum анализирует геолокацию экрана, время суток и погодные условия
+            .tabs__banner
+                img.tabs__img(src="assets/images/tab-banner-min.png", alt="")
+
+        section.advertisers-cases
+            .advertisers-cases__container.container
+                .advertisers-cases__top
+                    h2.advertisers-cases__title.h2 Кейсы
+                    a.advertisers-cases__link-more(href="#") Смотреть все
+                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.42295 14.3401L1.42286 14.3402C1.21162 14.5533 0.87114 14.5532 0.660209 14.3403L0.660038 14.3401C0.446646 14.1249 0.446666 13.774 0.660024 13.5588L0.660033 13.5588L6.31882 7.85195L6.66791 7.49989L6.31882 7.14784L0.660274 1.44124C0.660248 1.44121 0.660222 1.44119 0.660196 1.44116C0.446756 1.22573 0.446883 0.8749 0.660203 0.659761L0.660274 0.659689C0.871268 0.44681 1.21186 0.446706 1.42311 0.659761L1.42311 0.659764L7.81825 7.10934C7.81828 7.10937 7.81831 7.1094 7.81834 7.10943C7.92466 7.21675 7.97826 7.35699 7.97826 7.49986C7.97826 7.6428 7.9245 7.78326 7.81818 7.89052C7.81817 7.89053 7.81816 7.89055 7.81815 7.89056L1.42295 14.3401Z" fill="#4414DA" stroke=""/>
+                        </svg>
+
+                ul.advertisers-cases__list
+                    li.advertisers-cases__item
+                        a.advertisers-cases__link(href="#")
+                            .advertisers-cases__img-wrap
+                                img.advertisers-cases__img(src="assets/images/mockup-min.jpg", alt="")
+                            .advertisers-cases__text-wrap
+                                h3.advertisers-cases__caption Реклама для зоомагазина
+                                p.advertisers-cases__text Описание проекта, который мы выполнили и какие мы молодцы.
+                    li.advertisers-cases__item
+                        a.advertisers-cases__link(href="#")
+                            .advertisers-cases__img-wrap
+                                img.advertisers-cases__img(src="assets/images/advertcase-2-min.jpg", alt="")
+                            .advertisers-cases__text-wrap
+                                h3.advertisers-cases__caption Реклама для зоомагазина
+                                p.advertisers-cases__text Описание проекта, который мы выполнили и какие мы молодцы.
+                    li.advertisers-cases__item
+                        a.advertisers-cases__link(href="#")
+                            .advertisers-cases__img-wrap
+                                img.advertisers-cases__img(src="assets/images/advertcase-1-min.jpg", alt="")
+                            .advertisers-cases__text-wrap
+                                h3.advertisers-cases__caption Реклама для зоомагазина
+                                p.advertisers-cases__text Описание проекта, который мы выполнили и какие мы молодцы.
+
+        include ../components/form.pug

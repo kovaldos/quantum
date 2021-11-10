@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Регистрация</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container container"><a class="header__logo" href="#">
+            <svg class="header__svg" width="200" height="63">
+              <use xlink:href="assets/images/sprite.svg#logo"></use>
+            </svg></a>
+          <button class="header__toggle" type="button" aria-label="Меню"><span class="header__toggle-middle"></span></button>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="#">О сервисе</a></li>
+              <li class="header__item"><a class="header__link" href="#">Рекламодателям</a></li>
+              <li class="header__item"><a class="header__link" href="#">Такси</a></li>
+              <li class="header__item"><a class="header__link" href="#">Кейсы</a></li>
+              <li class="header__item"><a class="header__link" href="#">Новости</a></li>
+              <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
+            </ul><a class="header__btn btn btn--blue" href="#">Войти</a>
+            <ul class="header__social-list social-list">
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="8" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="9">
+                    <use xlink:href="assets/images/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="12">
+                    <use xlink:href="assets/images/sprite.svg#icon-tw"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-ig"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="11">
+                    <use xlink:href="assets/images/sprite.svg#icon-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="registration-page">
+        <section class="registration">
+          <div class="registration__container container">
+            <h1 class="registration__title h2">Зарегистрироваться в системе Quantum Advertising</h1>
+            <form class="form__list" action="#" method="#" onsubmit="return false">
+              <div class="form__item">
+                <input class="form__input" type="text" name="first-name" id="first-name" data-required>
+                <label class="form__label" for="first-name">Имя</label>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="text" name="last-name" id="last-name" data-required>
+                <label class="form__label" for="last-name">Фамилия</label>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="email" name="email" id="email" data-type="email" data-required>
+                <label class="form__label" for="email">E-mail</label>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="tel" name="tel" id="tel" data-type="tel" data-required>
+                <label class="form__label" for="tel">Телефон</label>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="text" name="company" id="company" data-required>
+                <label class="form__label" for="company">Компания</label>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="password" name="make-pass" id="make-pass" data-required>
+                <label class="form__label" for="make-pass">Пароль</label>
+              </div>
+              <div class="form__item">
+                <input class="form__input" type="password" name="make-pass" id="make-pass" data-required>
+                <label class="form__label" for="make-pass">Повторите пароль</label>
+              </div>
+              <label class="form__agreement">
+                <input class="form__check visually-hidden" type="checkbox" name="agreement" value=""><span>Я принимаю условия <a class="form__link" href="#"> Пользовательского соглашения</a></span>
+              </label>
+              <button class="form__btn btn btn--blue" type="submit">Зарегистрироваться</button>
+            </form>
+            <div class="login__wrap"><a class="login__link" href="#">Войти в аккаунт</a></div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__container footer__container--top container">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="#">О сервисе</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Такси</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Рекламодателям</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Кейсы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Новости</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__container footer__container--bottom container">
+            <ul class="footer__social-list social-list">
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="8" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="9">
+                    <use xlink:href="assets/images/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="12">
+                    <use xlink:href="assets/images/sprite.svg#icon-tw"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-ig"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="11">
+                    <use xlink:href="assets/images/sprite.svg#icon-yt"></use>
+                  </svg></a></li>
+            </ul><a class="footer__link" href="#">Пользовательское соглашение</a>
+            <p class="footer__text">Сайт сделал: <a class="footer__link" href="#">RA-Studio</a></p>
+          </div>
+        </div>
+      </footer>
+      <div class="popup popup-noty">
+        <div class="popup-wrap">
+          <section class="popup-success">
+            <div class="popup-success__container">
+              <h2 class="popup-success__title popup__title">Ваше сообщение успешно отправлено!</h2>
+              <p class="popup-success__text">Мы свяжемся с вами в течении 20 минут</p>
+              <div class="popup-success__img-wrap"><img class="popup-success__img" src="assets/images/popup-img-min.png" alt=""></div>
+              <button class="popup-success__btn popup__close" type="button" aria-label="Зыкрыть">
+                <svg class="popup__close-icon" width="13" height="13">
+                  <use xlink:href="assets/images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="popup popup-blank">
+        <div class="popup-wrap">
+          <section class="popup-form">
+            <div class="popup-form__container">
+              <h2 class="popup-form__title popup__title">Отправить заявку на подключение</h2>
+              <form class="form__list" action="#" method="#" onsubmit="return false">
+                <div class="form__item">
+                  <input class="form__input" type="text" name="name" id="name">
+                  <label class="form__label" for="name">Имя</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="tel" name="tel" id="tel" data-type="tel" data-required>
+                  <label class="form__label" for="tel">Телефон</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="email" name="email" id="email" data-type="email" data-required>
+                  <label class="form__label" for="email">E-mail</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="text" name="theme" id="theme">
+                  <label class="form__label" for="theme">Тема</label>
+                </div>
+                <div class="form__item">
+                  <textarea class="form__input" name="message" id="message"></textarea>
+                  <label class="form__label" for="message">Сообщение</label>
+                </div>
+                <button class="form__btn btn btn--blue" type="submit">Отправить</button>
+              </form>
+              <button class="popup-form__btn popup__close" type="button" aria-label="Зыкрыть">
+                <svg class="popup__close-icon" width="13" height="13">
+                  <use xlink:href="assets/images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/imask.min.js"></script>
+    <script src="assets/scripts/accordion.min.js"></script>
+    <script src="assets/scripts/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/medium-zoom.min.js"></script>
+    <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/smoothscroll.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>

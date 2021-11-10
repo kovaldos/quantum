@@ -1,0 +1,54 @@
+extends ../template
+
+block variables
+    - var title = 'Новость'
+
+block content
+    main.news-item-page
+        section.news-item
+            .news-item__container.container
+                .news-item__breadcrumbs.breadcrumbs
+                    include ../components/breadcrumbs.pug
+                h1.news-item__title Отслеживание экрана по GPS
+
+                .news-item__wrap
+                    .news-item__left
+                        .news-item__img-wrap
+                            img.news-item__img(src="assets/images/advertcase-2-min.jpg", alt="")
+                        .news-item__text-wrap
+                            p.news-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            p.news-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            p.news-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            p.news-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    .news-item__right
+                        h3.news-item__subtitle Другие новости
+                        .news-item__slider-right.swiper-container
+                            ul.news__list.news-item__list.swiper-wrapper
+                                li.news__item.swiper-slide
+                                    a.news__link(href="#")
+                                        .news__img-wrap
+                                            img.news__img(src="assets/images/news-min.jpg", alt="Отслеживание экрана по GPS")
+                                        .news__text-wrap
+                                            h3.news__subtitle Отслеживание экрана по GPS
+                                            p.news__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом.
+                                            span.news__date 17.01.2021
+                                li.news__item.swiper-slide
+                                    a.news__link(href="#")
+                                        .news__img-wrap
+                                            img.news__img(src="assets/images/news-min.jpg", alt="Отслеживание экрана по GPS")
+                                        .news__text-wrap
+                                            h3.news__subtitle Отслеживание экрана по GPS
+                                            p.news__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом.
+                                            span.news__date 17.01.2021
+                                li.news__item.swiper-slide
+                                    a.news__link(href="#")
+                                        .news__img-wrap
+                                            img.news__img(src="assets/images/news-min.jpg", alt="Отслеживание экрана по GPS")
+                                        .news__text-wrap
+                                            h3.news__subtitle Отслеживание экрана по GPS
+                                            p.news__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом.
+                                            span.news__date 17.01.2021

@@ -1,0 +1,69 @@
+extends ../template
+
+block variables
+    - var title = 'Кейс'
+
+block content
+    main.case-item-page
+        section.case-item
+            .case-item__container.container
+                .case-item__breadcrumbs.breadcrumbs
+                    include ../components/breadcrumbs.pug
+                h1.case-item__title Реклама для зоомагазина
+
+                .case-item__wrap
+                    .case-item__left
+                        .case-item__img-wrap
+                            img.case-item__img(src="assets/images/advertcase-2-min.jpg", alt="")
+                        .case-item__text-wrap
+                            p.case-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            p.case-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            p.case-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                            p.case-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        .case-item__slider
+                            .swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        figure.case-item__slider-img-wrap
+                                            img.case-item__slider-img(src="assets/images/tab-banner-min.png", alt="")
+                                            figcaption.case-item__img-caption Подпись под фото
+                                    .swiper-slide
+                                        figure.case-item__slider-img-wrap
+                                            img.case-item__slider-img(src="assets/images/tab-banner-min.png", alt="")
+                                            figcaption.case-item__img-caption Подпись под фото
+                                    .swiper-slide
+                                        figure.case-item__slider-img-wrap
+                                            img.case-item__slider-img(src="assets/images/tab-banner-min.png", alt="")
+                                            figcaption.case-item__img-caption Подпись под фото
+                            .swiper-pagination
+                            .swiper-button-prev
+                            .swiper-button-next
+                        
+                    .case-item__right
+                        h3.case-item__subtitle Другие кейсы
+                        .case-item__slider-rigth.swiper-container
+                            ul.advertisers-cases__list.case-item__list.swiper-wrapper
+                                li.advertisers-cases__item.swiper-slide
+                                    a.advertisers-cases__link(href="#")
+                                        .advertisers-cases__img-wrap
+                                            img.advertisers-cases__img(src="assets/images/advertcase-2-min.jpg", alt="")
+                                        .advertisers-cases__text-wrap
+                                            h3.advertisers-cases__caption Реклама для зоомагазина
+                                            p.advertisers-cases__text Описание проекта, который мы выполнили и какие мы молодцы.
+                                li.advertisers-cases__item.swiper-slide
+                                    a.advertisers-cases__link(href="#")
+                                        .advertisers-cases__img-wrap
+                                            img.advertisers-cases__img(src="assets/images/advertcase-2-min.jpg", alt="")
+                                        .advertisers-cases__text-wrap
+                                            h3.advertisers-cases__caption Реклама для зоомагазина
+                                            p.advertisers-cases__text Описание проекта, который мы выполнили и какие мы молодцы.
+                                li.advertisers-cases__item.swiper-slide
+                                    a.advertisers-cases__link(href="#")
+                                        .advertisers-cases__img-wrap
+                                            img.advertisers-cases__img(src="assets/images/advertcase-2-min.jpg", alt="")
+                                        .advertisers-cases__text-wrap
+                                            h3.advertisers-cases__caption Реклама для зоомагазина
+                                            p.advertisers-cases__text Описание проекта, который мы выполнили и какие мы молодцы.

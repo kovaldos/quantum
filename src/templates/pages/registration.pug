@@ -1,0 +1,39 @@
+extends ../template
+
+block variables
+    - var title = 'Регистрация'
+
+block content
+    main.registration-page
+        section.registration
+            .registration__container.container
+                h1.registration__title.h2 Зарегистрироваться в системе Quantum Advertising
+                form.form__list(action="#" method="#" onsubmit="return false")
+                    .form__item
+                        input.form__input(type="text" name="first-name" id="first-name" data-required)
+                        label.form__label(for="first-name") Имя
+                    .form__item
+                        input.form__input(type="text" name="last-name" id="last-name" data-required)
+                        label.form__label(for="last-name") Фамилия
+                    .form__item
+                        input.form__input(type="email" name="email" id="email" data-type="email" data-required)
+                        label.form__label(for="email") E-mail
+                    .form__item
+                        input.form__input(type="tel" name="tel" id="tel" data-type="tel" data-required)
+                        label.form__label(for="tel") Телефон
+                    .form__item
+                        input.form__input(type="text" name="company" id="company" data-required)
+                        label.form__label(for="company") Компания
+                    .form__item
+                        input.form__input(type="password" name="make-pass" id="make-pass" data-required)
+                        label.form__label(for="make-pass") Пароль
+                    .form__item
+                        input.form__input(type="password" name="make-pass" id="make-pass" data-required)
+                        label.form__label(for="make-pass") Повторите пароль
+                    label.form__agreement
+                        input.form__check.visually-hidden(type="checkbox" name="agreement" value="") 
+                        span Я принимаю условия 
+                            a.form__link(href="#")  Пользовательского соглашения
+                    button.form__btn.btn.btn--blue(type="submit") Зарегистрироваться
+                .login__wrap
+                    a.login__link(href="#") Войти в аккаунт

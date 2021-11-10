@@ -1,0 +1,14 @@
+extends ../template
+
+block variables
+    - var title = '404'
+
+block content
+    main.nf-page
+        section.nf
+            .nf__container.container
+                .nf__text-wrap
+                    span.nf__error ошибка
+                    span.nf__num 404
+                    span.nf__text Страница не найдена
+                    a.nf__link.btn.btn--blue(href="#") Вернуться на главную

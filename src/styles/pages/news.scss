@@ -1,0 +1,23 @@
+.news-page__list {
+    margin-top: 100px;
+    margin-bottom: 130px;
+}
+
+@media screen and (max-width: 1023px) {
+    .news-page__list {
+        .news__list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .news-page__list {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        
+        .news__list {
+            grid-template-columns: 1fr;
+        }
+    }
+}

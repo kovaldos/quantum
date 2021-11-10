@@ -1,0 +1,116 @@
+extends ../template
+
+block variables
+    - var title = 'Такси'
+
+block content
+    main.taxi-page
+        section.page-banner
+            .page-banner__img-wrap
+                img.page-banner__img(src="assets/images/page-banner-min.jpg", alt="Баннер")
+            .page-banner__container.container
+                .breadcrumbs
+                    include ../components/breadcrumbs.pug
+                .page-banner__title-wrap
+                    h1.pages-banner__title.h1 Такси
+        
+        section.taxi.layout
+            .layout__top.layout-top
+                .layout__top-banner
+                    img.layout__top-img(src="assets/images/taxi-banner-min.png", alt="")
+                .layout-top__container.container
+                    .layout-top__text-wrap
+                        h2.layout-top__title Lorem ipsum dolor sit amet, consectetur.
+                        p.layout-top__text Мы подключаем умные экраны с высоким разрешением на такси и корпоративных автомобилях в Санкт-Петербурге. С помощью первой в своем роде медиа-платформы уличного уровня Quantum Advertising Вы можете эффективно охватывать и вовлекать своих клиентов в повседневное путешествие.
+            .layout__list
+                .layout__item.layout__item--right.container
+                    .layout__text-wrap
+                        h3.layout__subtitle.h2 Удаленное управление эфиром и цифровая подпись для каждого ролика
+                        p.layout__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом, на основе таких данных как местоположение, время суток и погода. Получите максимальную выгоду от покупки рекламы с помощью измеримой рентабельности инвестиций, атрибуции и алгоритмических продаж.
+                    .layout__img-wrap
+                        img.layout__img(src="assets/images/taxi-1-min.jpg", alt="")
+                .layout__item.layout__item--left.container
+                    .layout__img-wrap
+                        img.layout__img(src="assets/images/taxi-2-min.jpg", alt="")
+                    .layout__text-wrap
+                        h3.layout__subtitle.h2 Удаленное управление эфиром и цифровая подпись для каждого ролика
+                        p.layout__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом, на основе таких данных как местоположение, время суток и погода. Получите максимальную выгоду от покупки рекламы с помощью измеримой рентабельности инвестиций, атрибуции и алгоритмических продаж.
+        
+        section.taxi-how.how-works
+            .how-works__container.container
+                h2.how-works__title.h2 Подключите Quantum и начните зарабатывать больше
+
+                ul.how-works__list
+                    li.how-works__item
+                        svg(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#target")
+                        h3.how-works__caption Только целевая аудитория
+                        p.how-works__text Выбрать на интерактивной карте города места, где вашааудитория увидит рекламу
+                    li.how-works__item
+                        svg(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#technical-support")
+                        h3.how-works__caption Эффективность
+                        p.how-works__text Запустить рекламную кампанию. Менять параметры и останавливать показы можно в режиме реального времени
+                    li.how-works__item
+                        svg(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#chart")
+                        h3.how-works__caption Точная аналитика
+                        p.how-works__text Используйте собранные MAC-адреса для таргетированной или контекстной рекламы и завершите продажу
+                    li.how-works__item
+                        svg(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#shield")
+                        h3.how-works__caption Точная аналитика
+                        p.how-works__text Используйте собранные MAC-адреса для таргетированной или контекстной рекламы и завершите продажу
+
+        section.taxi-tabs.tabs
+            .tabs__container.container
+                h2.tabs__title.h2 Возможности
+                .tabs__wrap(data-tab)
+                    //- .tabs__nav
+                    //-     label.tabs__label
+                    //-         input.tabs__input.visually-hidden(type="radio" name="tab-name" value="taxi" data-nav-tab="tab-1" checked)
+                    //-         span.tabs__name Геотаргетинг
+                    //-     label.tabs__label
+                    //-         input.tabs__input.visually-hidden(type="radio" name="tab-name" value="business" data-nav-tab="tab-2")
+                    //-         span.tabs__name Личный кабинет
+                    //-     label.tabs__label
+                    //-         input.tabs__input.visually-hidden(type="radio" name="tab-name" value="advertiser" data-nav-tab="tab-3")
+                    //-         span.tabs__name Нейросеть
+                    .tabs__content 
+                        ul.tabs__item.tabs-list.active(data-item-tab="tab-1")
+                            li.tabs-list__item
+                                .tabs-list__left
+                                    span.tabs-list__num 7 000 ₽
+                                .tabs-list__right
+                                    h3.tabs-list__caption Сверхприбыль
+                                    p.tabs-list__text Ежемесячно с каждой машины
+                            li.tabs-list__item
+                                .tabs-list__left
+                                    span.tabs-list__num 0 ₽
+                                .tabs-list__right
+                                    h3.tabs-list__caption Подключение
+                                    p.tabs-list__text Быстро и бесплатно
+                            li.tabs-list__item
+                                .tabs-list__left
+                                    span.tabs-list__num 0 ₽
+                                .tabs-list__right
+                                    h3.tabs-list__caption Обслуживание
+                                    p.tabs-list__text Мы сами следим за экранами
+                        ul.tabs__item.tabs-list(data-item-tab="tab-2")
+                            li.tabs-list__item
+                                .tabs-list__left
+                                    span.tabs-list__num 7 000 ₽
+                                .tabs-list__right
+                                    h3.tabs-list__caption Сверхприбыль
+                                    p.tabs-list__text Ежемесячно с каждой машины
+                        ul.tabs__item.tabs-list(data-item-tab="tab-3")
+                            li.tabs-list__item
+                                .tabs-list__left
+                                    span.tabs-list__num 7 000 ₽
+                                .tabs-list__right
+                                    h3.tabs-list__caption Сверхприбыль
+                                    p.tabs-list__text Ежемесячно с каждой машины
+            .tabs__banner
+                img.tabs__img(src="assets/images/tab-banner-min.png", alt="")
+
+        include ../components/form.pug

@@ -1,0 +1,110 @@
+.news-item {
+    margin-bottom: 130px;
+}
+
+.news-item__breadcrumbs {
+    margin-top: 50px;
+    margin-bottom: 80px;
+
+    .breadcrumbs__link {
+        color: $color-super-black;
+
+        svg {
+            --icon-breadcrumbs: #{$color-super-black};
+        }
+    }
+}
+.news-item__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 52px;
+}
+.news-item__list {
+    grid-template-columns: 1fr;
+}
+.news-item__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.news-item__left {
+    max-width: 810px;
+}
+.news-item__img-wrap {
+    max-height: 450px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+.news-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.news-item__text {
+    &:not(:last-of-type) {
+        margin-bottom: 40px;
+    }
+}
+
+.news-item__right {
+    max-width: 355px;
+    margin-left: 20px;
+}
+.news-item__subtitle {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 50px;
+}
+.news-item__list {
+    .news__img-wrap {
+        height: 186px;
+    }
+    .news__subtitle  {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .news__text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .news__date {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .news-item__wrap {
+        flex-direction: column;
+    }
+    .news-item__left {
+        max-width: 100%;
+    }
+    .news-item__list {
+        display: flex;
+        column-gap: 0;
+        row-gap: 0;
+    }
+    .news-item__right {
+        max-width: 100%;
+        margin: 0;
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .news-item {
+        margin-bottom: 60px;
+    }
+    .news-item__breadcrumbs {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .news-item__title {
+        font-size: 20px;
+		line-height: 24px;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,23 @@
+section.form
+    .container
+        h2.form__title.h2 Подключиться
+        .form__wrap
+            form.form__list(action="#" method="#" onsubmit="return false")
+                .form__item
+                    input.form__input(type="text" name="name" id="name" data-required)
+                    label.form__label(for="name") Имя
+                .form__item
+                    input.form__input(type="tel" name="tel" id="tel" data-type="tel" data-required)
+                    label.form__label(for="tel") Телефон
+                .form__item
+                    input.form__input(type="email" name="email" id="email" data-type="email" data-required)
+                    label.form__label(for="email") E-mail
+                .form__item
+                    input.form__input(type="text" name="theme" id="theme" data-required)
+                    label.form__label(for="theme") Тема
+                .form__item
+                    textarea.form__input(name="message" id="message" data-required)
+                    label.form__label(for="message") Сообщение
+                button.form__btn.btn.btn--blue(type="submit") Отправить
+            .form__img-wrap
+                img(src="assets/images/banner-logo-min.png", alt="Логотип")

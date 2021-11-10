@@ -1,0 +1,215 @@
+extends ../template
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.main-page
+        section.main-banner
+            .main-banner__background
+                video.main-banner__video(autoplay loop preload)
+                    source(src="assets/images/gif-maker-3.mp4")
+            .main-banner__container.container
+                .main-banner__text-wrap
+                    h1.main-banner__title.h1 Умные LED экраны для Вашего бизнеса
+                    p.main-banner__text Расскажите о себе всему городу с помощью наших умных экранов Расскажите о себе всему городу с помощью наших умных экранов Расскажите о себе всему городу с помощью наших умных экранов Расскажите о себе всему городу с помощью наших умных экранов 
+                    button.main-banner__btn.btn.btn--white.js-form Подключиться
+            a.main-page__scroll-btn(href="#next")
+                svg.main-page__btn-icon(width="66" height="66")
+                    use(xlink:href="assets/images/sprite.svg#icon-mouse")
+
+        section.advantages.layout#next.scrollto
+            .layout__top.layout-top
+                .layout__top-banner
+                    img.layout__top-img(src="assets/images/block-banner-min.png", alt="")
+                .layout-top__container.container
+                    .layout-top__text-wrap
+                        h2.layout-top__title Что мы делаем<br> и как это работает
+                        p.layout-top__text Мы подключаем умные экраны с высоким разрешением на такси и корпоративных автомобилях в Санкт-Петербурге. С помощью первой в своем роде медиа-платформы уличного уровня Quantum Advertising Вы можете эффективно охватывать и вовлекать своих клиентов в повседневное путешествие.
+            .layout__list
+                .layout__item.layout__item--left.container
+                    .layout__img-wrap
+                        img.layout__img(src="assets/images/mockup-min.jpg", alt="")
+                    .layout__text-wrap
+                        h3.layout__subtitle.h2 Удаленное управление эфиром и цифровая подпись для каждого ролика
+                        p.layout__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом, на основе таких данных как местоположение, время суток и погода. Получите максимальную выгоду от покупки рекламы с помощью измеримой рентабельности инвестиций, атрибуции и алгоритмических продаж.
+                .layout__item.layout__item--right.container
+                    .layout__text-wrap
+                        h3.layout__subtitle.h2 Удаленное управление эфиром и цифровая подпись для каждого ролика
+                        p.layout__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом, на основе таких данных как местоположение, время суток и погода. Получите максимальную выгоду от покупки рекламы с помощью измеримой рентабельности инвестиций, атрибуции и алгоритмических продаж.
+                    .layout__img-wrap
+                        img.layout__img(src="assets/images/mockup-min.jpg", alt="")
+                .layout__item.layout__item--left.container
+                    .layout__img-wrap
+                        img.layout__img(src="assets/images/map-min.png", alt="")
+                    .layout__text-wrap
+                        h3.layout__subtitle.h2 Тепловая карта (где больше всего производятся показы) и отслеживание экрана по GPS
+                        p.layout__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом, на основе таких данных как местоположение, время суток и погода. Получите максимальную выгоду от покупки рекламы с помощью измеримой рентабельности инвестиций, атрибуции и алгоритмических продаж.
+                        a.layout__btn.btn.btn--black.js-form(href="#") Подключиться
+
+        section.capability.tabs
+            .tabs__container.container
+                h2.tabs__title.h2 Возможности
+                .tabs__wrap(data-tab)
+                    .tabs__nav
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="taxi" data-nav-tab="tab-1" checked)
+                            span.tabs__name Для таксопарков
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="business" data-nav-tab="tab-2")
+                            span.tabs__name Для бизнеса
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="advertiser" data-nav-tab="tab-3")
+                            span.tabs__name Для рекламодателей
+                    .tabs__content 
+                        ul.tabs__item.tabs-list.active(data-item-tab="tab-1")
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#salary")
+                                h3.tabs-list__caption Дополнительный заработок
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#giftbox")
+                                h3.tabs-list__caption Бесплатное подключение Бесплатное подключение
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#battery")
+                                h3.tabs-list__caption Экран работает автономно
+                        ul.tabs__item.tabs-list(data-item-tab="tab-2")
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#salary")
+                                h3.tabs-list__caption Дополнительный заработок
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#giftbox")
+                                h3.tabs-list__caption Бесплатное подключение
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#battery")
+                                h3.tabs-list__caption Экран работает автономно
+                        ul.tabs__item.tabs-list(data-item-tab="tab-3")
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#salary")
+                                h3.tabs-list__caption Дополнительный заработок Дополнительный заработок
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#giftbox")
+                                h3.tabs-list__caption Бесплатное подключение
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#battery")
+                                h3.tabs-list__caption Экран работает автономно
+            .tabs__banner
+                img.tabs__img(src="assets/images/tab-banner-min.png", alt="")
+
+        section.partners
+            .partners__container.container
+                h2.partners__title.h2 Наши партнеры
+
+                .partners__slider
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href="#").partners__img-wrap
+                                    img.partners__img(src="assets/images/logo_maxim-red-min.png", alt="Логотип Maxim")
+                            .swiper-slide
+                                a(href="#").partners__img-wrap
+                                    img.partners__img(src="assets/images/logo_maxim-red-min.png", alt="Логотип Maxim")
+                            .swiper-slide
+                                a(href="#").partners__img-wrap
+                                    img.partners__img(src="assets/images/logo_maxim-red-min.png", alt="Логотип Maxim")
+                            .swiper-slide
+                                a(href="#").partners__img-wrap
+                                    img.partners__img(src="assets/images/logo_maxim-red-min.png", alt="Логотип Maxim")
+                            .swiper-slide
+                                a(href="#").partners__img-wrap
+                                    img.partners__img(src="assets/images/logo_maxim-red-min.png", alt="Логотип Maxim")
+                    .swiper-button-prev
+                    .swiper-button-next
+
+        section.news
+            .news__container.container
+                .seo-block 
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi pulvinar ultricies est ut nec tempus nec nullam tellus. Porttitor lorem lacus lectus id malesuada luctus. Id nullam fermentum pretium velit in nisl magna. Maecenas sed urna facilisis elementum quis dictum odio enim sed.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi pulvinar ultricies est ut nec tempus nec nullam tellus. Porttitor lorem lacus lectus id malesuada luctus. Id nullam fermentum pretium velit in nisl magna. Maecenas sed urna facilisis elementum quis dictum odio enim sed.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi pulvinar ultricies est ut nec tempus nec nullam tellus. Porttitor lorem lacus lectus id malesuada luctus. Id nullam fermentum pretium velit in nisl magna. Maecenas sed urna facilisis elementum quis dictum odio enim sed.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi pulvinar ultricies est ut nec tempus nec nullam tellus. Porttitor lorem lacus lectus id malesuada luctus. Id nullam fermentum pretium velit in nisl magna. Maecenas sed urna facilisis elementum quis dictum odio enim sed.
+
+        section.news
+            .news__container.container
+                .news__top
+                    h2.news__title.h2 Новости
+                    a.news__link-more(href="#") Смотреть все 
+                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.42295 14.3401L1.42286 14.3402C1.21162 14.5533 0.87114 14.5532 0.660209 14.3403L0.660038 14.3401C0.446646 14.1249 0.446666 13.774 0.660024 13.5588L0.660033 13.5588L6.31882 7.85195L6.66791 7.49989L6.31882 7.14784L0.660274 1.44124C0.660248 1.44121 0.660222 1.44119 0.660196 1.44116C0.446756 1.22573 0.446883 0.8749 0.660203 0.659761L0.660274 0.659689C0.871268 0.44681 1.21186 0.446706 1.42311 0.659761L1.42311 0.659764L7.81825 7.10934C7.81828 7.10937 7.81831 7.1094 7.81834 7.10943C7.92466 7.21675 7.97826 7.35699 7.97826 7.49986C7.97826 7.6428 7.9245 7.78326 7.81818 7.89052C7.81817 7.89053 7.81816 7.89055 7.81815 7.89056L1.42295 14.3401Z" fill="#4414DA" stroke=""/>
+                        </svg>
+                ul.news__list
+                    li.news__item
+                        a.news__link(href="#")
+                            .news__img-wrap
+                                img.news__img(src="assets/images/mockup-min.jpg", alt="Отслеживание экрана по GPS")
+                            .news__text-wrap
+                                h3.news__subtitle Отслеживание экрана по GPS
+                                p.news__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом.
+                                span.news__date 17.01.2021
+                    li.news__item
+                        a.news__link(href="#")
+                            .news__img-wrap
+                                img.news__img(src="assets/images/news-min.jpg", alt="Отслеживание экрана по GPS")
+                            .news__text-wrap
+                                h3.news__subtitle Отслеживание экрана по GPS
+                                p.news__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом.
+                                span.news__date 17.01.2021
+                    li.news__item
+                        a.news__link(href="#")
+                            .news__img-wrap
+                                img.news__img(src="assets/images/news-min.jpg", alt="Отслеживание экрана по GPS")
+                            .news__text-wrap
+                                h3.news__subtitle Отслеживание экрана по GPS
+                                p.news__text Ваша целевая аудитория в видит рекламу в нужные моменты с динамическим контентом.
+                                span.news__date 17.01.2021
+
+        section.news
+            .news__container.container
+                h2.partners__title.h2 Часто задаваемые вопросы
+
+                .faq-cont__wrap
+                    .faq-cont.ac 
+                        .faq-cont__header.ac-header.ac-trigger Отслеживание экрана по GPS
+                            .faq-cont__plus
+                        .ac-panel
+                            .faq-cont__panel
+                                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestias consectetur optio cupiditate atque quas iure facere quis nam nobis culpa veritatis maiores non expedita, debitis accusamus error ad eum.
+                    .faq-cont.ac 
+                        .faq-cont__header.ac-header.ac-trigger Отслеживание экрана по GPS
+                            .faq-cont__plus
+                        .ac-panel
+                            .faq-cont__panel
+                                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestias consectetur optio cupiditate atque quas iure facere quis nam nobis culpa veritatis maiores non expedita, debitis accusamus error ad eum.
+                    .faq-cont.ac 
+                        .faq-cont__header.ac-header.ac-trigger Отслеживание экрана по GPS
+                            .faq-cont__plus
+                        .ac-panel
+                            .faq-cont__panel
+                                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestias consectetur optio cupiditate atque quas iure facere quis nam nobis culpa veritatis maiores non expedita, debitis accusamus error ad eum.
+                    .faq-cont.ac 
+                        .faq-cont__header.ac-header.ac-trigger Отслеживание экрана по GPS
+                            .faq-cont__plus
+                        .ac-panel
+                            .faq-cont__panel
+                                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates molestias consectetur optio cupiditate atque quas iure facere quis nam nobis culpa veritatis maiores non expedita, debitis accusamus error ad eum.
+
+
+
+
+
+
+
+
+
+
+
+
+

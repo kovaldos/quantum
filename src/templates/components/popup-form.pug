@@ -1,0 +1,24 @@
+.popup-wrap
+    section.popup-form
+        .popup-form__container
+            h2.popup-form__title.popup__title Отправить заявку на подключение
+            form.form__list(action="#" method="#" onsubmit="return false")
+                .form__item
+                    input.form__input(type="text" name="name" id="name")
+                    label.form__label(for="name") Имя
+                .form__item
+                    input.form__input(type="tel" name="tel" id="tel" data-type="tel" data-required)
+                    label.form__label(for="tel") Телефон
+                .form__item
+                    input.form__input(type="email" name="email" id="email" data-type="email" data-required)
+                    label.form__label(for="email") E-mail
+                .form__item
+                    input.form__input(type="text" name="theme" id="theme")
+                    label.form__label(for="theme") Тема
+                .form__item
+                    textarea.form__input(name="message" id="message")
+                    label.form__label(for="message") Сообщение
+                button.form__btn.btn.btn--blue(type="submit") Отправить
+            button.popup-form__btn.popup__close(type="button" aria-label="Зыкрыть")
+                svg.popup__close-icon(width="13" height="13")
+                    use(xlink:href="assets/images/sprite.svg#icon-close")

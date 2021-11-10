@@ -1,0 +1,219 @@
+// Размеры
+$content-max-weight: 1240px;
+
+//цвета
+$color-super-black: #000000;
+$color-arrows: #050505;
+$color-black1: #070707;
+$color-black: #242424;
+$color-black2: #272727;
+$color-darkgrey1: #333333;
+$color-darkgrey: #595959;
+$color-supergrey: #6A6A6A;
+$color-grey: #a5a5a5;
+$color-grey1: #adadad;
+$color-grey4: #C4C4C4;
+$color-grey2: #d7d7d7;
+$color-lightgrey2: #EEEEEE;
+$color-grey3: #e3e3e3;
+$color-back-grey: #E6E6E6;
+$color-lightgrey: #f8f8f8;
+$color-white: #ffffff;
+$color-blue: #4414da;
+$color-red: #ff7878;
+$color-super-red: #E30000;
+
+@import "./common/fonts.scss";
+@import "./common/normalize";
+@import "./common/mixins";
+
+* {
+	box-sizing: border-box;
+	outline-offset: 4px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	line-height: 160%;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+// https://github.com/WICG/focus-visible
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
+.scroll-hidden {
+	overflow-y: hidden;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+main {
+	flex: 1;
+	padding-top: 108px;
+}
+
+.container {
+	max-width: 1410px;
+	width: 100%;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	border-radius: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+}
+.btn--blue {
+	color: $color-white;
+	background-color: $color-blue;
+}
+
+.btn--white {
+	color: $color-super-black;
+	background-color: $color-white;
+	@include hover-blue;
+}
+
+.btn--black {
+	color: $color-white;
+	background-color: $color-black2;
+	@include hover-blue;
+}
+
+.h1 {
+	font-weight: 800;
+	font-size: 70px;
+	line-height: 130%;
+	color: $color-white;
+}
+
+.h2 {
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 44px;
+	color: $color-super-black;
+}
+
+@import "./common/header.scss";
+@import "./pages/index.scss";
+@import "./pages/main.scss";
+@import "./pages/service.scss";
+@import "./pages/contacts.scss";
+@import "./pages/advertisers.scss";
+@import "./pages/taxi.scss";
+@import "./pages/case.scss";
+@import "./pages/case-item.scss";
+@import "./pages/news.scss";
+@import "./pages/news-item.scss";
+@import "./pages/404.scss";
+@import "./common/footer.scss";
+
+@import "./common/form.scss";
+@import "./common/breadcrumbs.scss";
+@import "./common/popup-success.scss";
+@import "./common/popup-form.scss";
+@import "./common/snackbar.scss";
+@import "./common/popup-to-designers.scss";
+
+// @media screen and (max-width: 1274px) {
+
+// }
+
+@media screen and (max-width: 1024px) {
+	.h2 {
+		font-size: 28px;
+		line-height: 34px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 16px;
+	}
+	main {
+		padding-top: 95px;
+	}
+	.h1 {
+		font-size: 26px;
+		line-height: 130%;
+	}
+	.h2 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.btn {
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
+
+/*lk*/
+@import "./pages/login.scss";
+@import "./pages/registration.scss";
+@import "./pages/campaign.scss";
+@import "./pages/details.scss";
+
+input, textarea, select {
+	outline: none;
+}
+select {
+	-webkit-border-radius: 0px;
+	border-radius: 0;
+}

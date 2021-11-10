@@ -1,0 +1,103 @@
+.tab-details__box
+    h2.tab-details__title График показа рекламной кампании
+    ul.tab-details__list
+        li.tab-details__item
+            form.tab-details__wrap
+                .form__item(data-form-item)
+                    input.form__input(type="text" data-form-input)
+                    label.form__label(data-form-label) Дата начала
+                    svg.form__icon(width="20" height="20")
+                        use(xlink:href="assets/images/sprite.svg#small-calendar")
+                .tab-details__select-wrap.form__item(data-form-item)
+                    select.form__input.tab-details__select(name="time-start" data-form-input)
+                        option(value="") 
+                        option(value="11:30") 11:30
+                    span.form__label(data-form-label) Время начала
+                    svg(width="14" height="14")
+                        use(xlink:href="assets/images/sprite.svg#chevron")
+                .form__item
+                    input.form__input(type="text")
+                    label.form__label Дата окончания
+                    svg.form__icon(width="20" height="20")
+                        use(xlink:href="assets/images/sprite.svg#small-calendar")
+                .tab-details__select-wrap.form__item(data-form-item)
+                    select.form__input.tab-details__select(name="time-start" data-form-input)
+                        option(value="") 
+                        option(value="11:30") 15:30
+                    span.form__label(data-form-label) Время окончания
+                    svg(width="14" height="14")
+                        use(xlink:href="assets/images/sprite.svg#chevron")
+            button.tab-details__btn.btn.btn--black Добавить период
+
+        li.tab-details__item
+            form.tab-details__wrap
+                .form__item(data-form-item)
+                    input.form__input(type="text" data-form-input)
+                    label.form__label(data-form-label) Дата начала
+                    svg.form__icon(width="20" height="20")
+                        use(xlink:href="assets/images/sprite.svg#small-calendar")
+                .tab-details__select-wrap.form__item(data-form-item)
+                    select.form__input.tab-details__select(name="time-start" data-form-input)
+                        option(value="") 
+                        option(value="11:30") 11:30
+                    span.form__label(data-form-label) Время начала
+                    svg(width="14" height="14")
+                        use(xlink:href="assets/images/sprite.svg#chevron")
+                .form__item
+                    input.form__input(type="text")
+                    label.form__label Дата окончания
+                    svg.form__icon(width="20" height="20")
+                        use(xlink:href="assets/images/sprite.svg#small-calendar")
+                .tab-details__select-wrap.form__item(data-form-item)
+                    select.form__input.tab-details__select(name="time-start" data-form-input)
+                        option(value="") 
+                        option(value="11:30") 15:30
+                    span.form__label(data-form-label) Время окончания
+                    svg(width="14" height="14")
+                        use(xlink:href="assets/images/sprite.svg#chevron")
+            .tab-details__more.campaign-table__cell--more
+                button.campaign-table__more(data-drop)
+                    span.campaign-table__dots
+                ul.campaign-table__drop.campaign-more
+                    li.campaign-more__item
+                        button.campaign-more__btn
+                            svg(width="12" height="12")
+                                use(xlink:href="assets/images/sprite.svg#icon-pen")
+                            span Редактировать
+                    li.campaign-more__item
+                        button.campaign-more__btn.campaign-more__btn--del
+                            svg(width="12" height="12")
+                                use(xlink:href="assets/images/sprite.svg#garbage-can")
+                            span Удалить
+.tab-details__box
+    h2.tab-details__title Бюждет
+    ul.tab-details__list.budget-list
+        li.budget-list__item.form__item
+            input.form__input(type="text")
+            label.form__label Общий бюджет
+        li.budget-list__item.form__item
+            input.form__input(type="text")
+            label.form__label Дневной бюджет
+        li.budget-list__item.form__item
+            input.form__input(type="text")
+            label.form__label Частота показов
+
+.tab-details__box
+    h2.tab-details__title Геолокация
+    .tab-details__geo-wrap
+        .tab-details__map-wrap
+            img(src="assets/images/geolocation-min.png", alt="")
+            ul.tab-details__map-list
+                li.tab-details__map-item
+                    span.tab-details__map-text Машин в районе:
+                    span.tab-details__map-num 95
+                li.tab-details__map-item
+                    span.tab-details__map-text Среднее количество показов в день:
+                    span.tab-details__map-num 2 500
+        .tab-details__search-wrap
+            form.tab-details__search-form(action="#")
+                .tab-details__search.form__item
+                    input.form__input(type="search")
+                    label.form__label Выбранная область
+                button.tab-details__btn.btn.btn--black(type="submit") Добавить область
+        

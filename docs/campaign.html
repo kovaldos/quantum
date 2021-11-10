@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Кампании</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container container"><a class="header__logo" href="#">
+            <svg class="header__svg" width="200" height="63">
+              <use xlink:href="assets/images/sprite.svg#logo"></use>
+            </svg></a>
+          <button class="header__toggle" type="button" aria-label="Меню"><span class="header__toggle-middle"></span></button>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="#">О сервисе</a></li>
+              <li class="header__item"><a class="header__link" href="#">Рекламодателям</a></li>
+              <li class="header__item"><a class="header__link" href="#">Такси</a></li>
+              <li class="header__item"><a class="header__link" href="#">Кейсы</a></li>
+              <li class="header__item"><a class="header__link" href="#">Новости</a></li>
+              <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
+            </ul><a class="header__btn btn btn--blue" href="#">Войти</a>
+            <ul class="header__social-list social-list">
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="8" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="9">
+                    <use xlink:href="assets/images/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="12">
+                    <use xlink:href="assets/images/sprite.svg#icon-tw"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-ig"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="11">
+                    <use xlink:href="assets/images/sprite.svg#icon-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="campaign-page">
+        <section class="campaign">
+          <div class="campaign__container container">
+            <div class="campaign__top">
+              <h1 class="campaign__title h2">Мои кампании</h1>
+              <button class="campaign__btn btn btn--black">Создать новую кампанию</button>
+            </div>
+            <div class="campaign__filter filter">
+              <h2 class="filter__caption">Фильтрация</h2>
+              <form class="filter__wrap" action="#" method="#" onsubmit="return false">
+                <div class="filter__select form__item" data-form-item>
+                  <select class="form__input" name="status" data-form-input>
+                    <option value=""></option>
+                    <option value="Остановлен">Остановлен</option>
+                  </select><span class="form__label" data-form-label>Все статусы</span>
+                  <svg width="14" height="14">
+                    <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                  </svg>
+                </div>
+                <div class="filter__search form__item">
+                  <input class="form__input" type="search">
+                  <label class="form__label">Поиск кампании</label>
+                </div>
+                <div class="filter__output"><span>Выводить по:</span>
+                  <select name="output">
+                    <option value="10">10</option>
+                  </select>
+                  <svg width="14" height="14">
+                    <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                  </svg>
+                </div>
+                <div class="filter__archive">
+                  <button class="filter__archive-btn">Архив кампаний</button>
+                  <div class="filter__archive-wrap">
+                    <button class="filter__date-btn" data-drop>
+                      <svg width="20" height="20">
+                        <use xlink:href="assets/images/sprite.svg#small-calendar"></use>
+                      </svg><span>Период: 12.12.2021 - 13.15.2022</span>
+                    </button>
+                    <div class="filter__date-wrap date-drop">
+                      <h3 class="date-drop__caption">Выберите период</h3>
+                      <div class="date-drop__list">
+                        <label class="date-drop__item">
+                          <input class="visually-hidden" type="radio" name="time" value="all-time"><span>За все время</span>
+                        </label>
+                        <label class="date-drop__item">
+                          <input class="visually-hidden" type="radio" name="time" value="curr-month"><span>Этот месяц</span>
+                        </label>
+                        <label class="date-drop__item">
+                          <input class="visually-hidden" type="radio" name="time" value="last-month"><span>Предыдущий месяц</span>
+                        </label>
+                        <label class="date-drop__item">
+                          <input class="visually-hidden" type="radio" name="time" value="curr-year"><span>Текущий год</span>
+                        </label>
+                        <label class="date-drop__item">
+                          <input class="visually-hidden" type="radio" name="time" value="last-year"><span>Прошлый год</span>
+                        </label>
+                      </div>
+                      <div class="date-drop__range"><span class="date-drop__range-caption">Или введите свой период</span>
+                        <div class="date-drop__range-list">
+                          <div class="date-drop__range-item form__item">
+                            <input class="form__input" type="text">
+                            <label class="form__label">От</label>
+                          </div>
+                          <div class="date-drop__range-item form__item">
+                            <input class="form__input" type="text">
+                            <label class="form__label">До</label>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="date-drop__btn btn btn--black">Выбрать</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="campaign__table-wrap">
+              <table class="campaign__table campaign-table">
+                <thead class="campaign-table__head">
+                  <tr class="campaign-table__head-row">
+                    <th class="campaign-table__head-cell">Имя кампании</th>
+                    <th class="campaign-table__head-cell">Статус</th>
+                    <th class="campaign-table__head-cell campaign-table__head-cell--hint"><span class="campaign-table__head-caption">Общий лимит</span><span class="campaign-table__head-hint"> <a href="#">?</a></span></th>
+                    <th class="campaign-table__head-cell">Дневной лимит</th>
+                    <th class="campaign-table__head-cell">Потрачено</th>
+                    <th class="campaign-table__head-cell">ОТС, чел.</th>
+                    <th class="campaign-table__head-cell">eCPM</th>
+                    <th class="campaign-table__head-cell">Статистика</th>
+                  </tr>
+                </thead>
+                <tbody class="campaign-table__body">
+                  <tr class="campaign-table__row">
+                    <td class="campaign-table__cell"><span class="campaign-table__name">Кампания Адмиралтейская</span><span class="campaign-table__date">Начало: 12.01.2020   11:30</span><span class="campaign-table__date">Окончание: 25.01.2020   18:00</span></td>
+                    <td class="campaign-table__cell campaign-table__cell--status">
+                      <button class="campaign-table__status" data-status="stop" data-drop>
+                        <svg width="12" height="12">
+                          <use xlink:href="assets/images/sprite.svg#square"></use>
+                        </svg>
+                      </button>
+                      <ul class="campaign-table__status-drop status-list">
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="stop">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#square"></use>
+                            </svg><span>Остановлена</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="start">
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#triangle"></use>
+                            </svg><span>Запустить</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn status-list__btn--del" data-status="delete">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Архивировать</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Общий лимит</span><span class="campaign-table__value">150 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Дневной лимит</span><span class="campaign-table__value">6 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Потрачено</span><span class="campaign-table__value">30 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">ОТС, чел.</span><span class="campaign-table__value">180 000</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">eCPM</span><span class="campaign-table__value">238 ₽</span></td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Статистика</span><a class="campaign-table__link-down" href="#"> 
+                        <svg class="campaign-table__stat" width="24" height="24">
+                          <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                        </svg></a></td>
+                    <td class="campaign-table__cell campaign-table__cell--more">
+                      <button class="campaign-table__more" data-drop><span class="campaign-table__dots"></span></button>
+                      <ul class="campaign-table__drop campaign-more">
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                            </svg><span>Редактировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="13">
+                              <use xlink:href="assets/images/sprite.svg#icon-copy"></use>
+                            </svg><span>Дублировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <div class="campaign-more__icon"></div><span>Приостановить кампанию</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                            </svg><span>Отчет по кампании</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn campaign-more__btn--del">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Перенести в архив</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell campaign-table__cell--show">
+                      <button class="campaign-table__btn-show">
+                        <svg width="15" height="15">
+                          <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                        </svg><span>Смотреть детали</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="campaign-table__row">
+                    <td class="campaign-table__cell"><span class="campaign-table__name">Кампания Адмиралтейская</span><span class="campaign-table__date">Начало: 12.01.2020   11:30</span><span class="campaign-table__date">Окончание: 25.01.2020   18:00</span></td>
+                    <td class="campaign-table__cell campaign-table__cell--status">
+                      <button class="campaign-table__status" data-status="stop" data-drop>
+                        <svg width="12" height="12">
+                          <use xlink:href="assets/images/sprite.svg#square"></use>
+                        </svg>
+                      </button>
+                      <ul class="campaign-table__status-drop status-list">
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="stop" data-drop>
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#square"></use>
+                            </svg><span>Остановлена</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="start">
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#triangle"></use>
+                            </svg><span>Запустить</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn status-list__btn--del" data-status="delete">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Архивировать</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Общий лимит</span><span class="campaign-table__value">150 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Дневной лимит</span><span class="campaign-table__value">6 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Потрачено</span><span class="campaign-table__value">30 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">ОТС, чел.</span><span class="campaign-table__value">180 000</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">eCPM</span><span class="campaign-table__value">238 ₽</span></td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Статистика</span><a class="campaign-table__link-down" href="#"> 
+                        <svg class="campaign-table__stat" width="24" height="24">
+                          <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                        </svg></a></td>
+                    <td class="campaign-table__cell campaign-table__cell--more">
+                      <button class="campaign-table__more" data-drop><span class="campaign-table__dots"></span></button>
+                      <ul class="campaign-table__drop campaign-more">
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                            </svg><span>Редактировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="13">
+                              <use xlink:href="assets/images/sprite.svg#icon-copy"></use>
+                            </svg><span>Дублировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <div class="campaign-more__icon"></div><span>Приостановить кампанию</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                            </svg><span>Отчет по кампании</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn campaign-more__btn--del">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Перенести в архив</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell campaign-table__cell--show">
+                      <button class="campaign-table__btn-show">
+                        <svg width="15" height="15">
+                          <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                        </svg><span>Смотреть детали</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="campaign-table__row">
+                    <td class="campaign-table__cell"><span class="campaign-table__name">Кампания Адмиралтейская</span><span class="campaign-table__date">Начало: 12.01.2020   11:30</span><span class="campaign-table__date">Окончание: 25.01.2020   18:00</span></td>
+                    <td class="campaign-table__cell campaign-table__cell--status">
+                      <button class="campaign-table__status" data-status="stop" data-drop>
+                        <svg width="12" height="12">
+                          <use xlink:href="assets/images/sprite.svg#square"></use>
+                        </svg>
+                      </button>
+                      <ul class="campaign-table__status-drop status-list">
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="stop">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#square"></use>
+                            </svg><span>Остановлена</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="start">
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#triangle"></use>
+                            </svg><span>Запустить</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn status-list__btn--del" data-status="delete">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Архивировать</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Общий лимит</span><span class="campaign-table__value">150 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Дневной лимит</span><span class="campaign-table__value">6 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Потрачено</span><span class="campaign-table__value">30 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">ОТС, чел.</span><span class="campaign-table__value">180 000</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">eCPM</span><span class="campaign-table__value">238 ₽</span></td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Статистика</span><a class="campaign-table__link-down" href="#"> 
+                        <svg class="campaign-table__stat" width="24" height="24">
+                          <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                        </svg></a></td>
+                    <td class="campaign-table__cell campaign-table__cell--more">
+                      <button class="campaign-table__more" data-drop><span class="campaign-table__dots"></span></button>
+                      <ul class="campaign-table__drop campaign-more">
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                            </svg><span>Редактировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="13">
+                              <use xlink:href="assets/images/sprite.svg#icon-copy"></use>
+                            </svg><span>Дублировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <div class="campaign-more__icon"></div><span>Приостановить кампанию</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                            </svg><span>Отчет по кампании</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn campaign-more__btn--del">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Перенести в архив</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell campaign-table__cell--show">
+                      <button class="campaign-table__btn-show">
+                        <svg width="15" height="15">
+                          <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                        </svg><span>Смотреть детали</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="campaign-table__row">
+                    <td class="campaign-table__cell"><span class="campaign-table__name">Кампания Адмиралтейская</span><span class="campaign-table__date">Начало: 12.01.2020   11:30</span><span class="campaign-table__date">Окончание: 25.01.2020   18:00</span></td>
+                    <td class="campaign-table__cell campaign-table__cell--status">
+                      <button class="campaign-table__status" data-status="stop" data-drop>
+                        <svg width="12" height="12">
+                          <use xlink:href="assets/images/sprite.svg#square"></use>
+                        </svg>
+                      </button>
+                      <ul class="campaign-table__status-drop status-list">
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="stop">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#square"></use>
+                            </svg><span>Остановлена</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="start">
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#triangle"></use>
+                            </svg><span>Запустить</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn status-list__btn--del" data-status="delete">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Архивировать</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Общий лимит</span><span class="campaign-table__value">150 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Дневной лимит</span><span class="campaign-table__value">6 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Потрачено</span><span class="campaign-table__value">30 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">ОТС, чел.</span><span class="campaign-table__value">180 000</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">eCPM</span><span class="campaign-table__value">238 ₽</span></td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Статистика</span><a class="campaign-table__link-down" href="#"> 
+                        <svg class="campaign-table__stat" width="24" height="24">
+                          <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                        </svg></a></td>
+                    <td class="campaign-table__cell campaign-table__cell--more">
+                      <button class="campaign-table__more" data-drop><span class="campaign-table__dots"></span></button>
+                      <ul class="campaign-table__drop campaign-more">
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                            </svg><span>Редактировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="13">
+                              <use xlink:href="assets/images/sprite.svg#icon-copy"></use>
+                            </svg><span>Дублировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <div class="campaign-more__icon"></div><span>Приостановить кампанию</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                            </svg><span>Отчет по кампании</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn campaign-more__btn--del">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Перенести в архив</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell campaign-table__cell--show">
+                      <button class="campaign-table__btn-show">
+                        <svg width="15" height="15">
+                          <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                        </svg><span>Смотреть детали</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="campaign-table__row">
+                    <td class="campaign-table__cell"><span class="campaign-table__name">Кампания Адмиралтейская</span><span class="campaign-table__date">Начало: 12.01.2020   11:30</span><span class="campaign-table__date">Окончание: 25.01.2020   18:00</span></td>
+                    <td class="campaign-table__cell campaign-table__cell--status">
+                      <button class="campaign-table__status" data-status="stop" data-drop>
+                        <svg width="12" height="12">
+                          <use xlink:href="assets/images/sprite.svg#square"></use>
+                        </svg>
+                      </button>
+                      <ul class="campaign-table__status-drop status-list">
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="stop">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#square"></use>
+                            </svg><span>Остановлена</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="start">
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#triangle"></use>
+                            </svg><span>Запустить</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn status-list__btn--del" data-status="delete">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Архивировать</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Общий лимит</span><span class="campaign-table__value">150 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Дневной лимит</span><span class="campaign-table__value">6 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Потрачено</span><span class="campaign-table__value">30 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">ОТС, чел.</span><span class="campaign-table__value">180 000</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">eCPM</span><span class="campaign-table__value">238 ₽</span></td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Статистика</span><a class="campaign-table__link-down" href="#"> 
+                        <svg class="campaign-table__stat" width="24" height="24">
+                          <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                        </svg></a></td>
+                    <td class="campaign-table__cell campaign-table__cell--more">
+                      <button class="campaign-table__more" data-drop><span class="campaign-table__dots"></span></button>
+                      <ul class="campaign-table__drop campaign-more">
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                            </svg><span>Редактировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="13">
+                              <use xlink:href="assets/images/sprite.svg#icon-copy"></use>
+                            </svg><span>Дублировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <div class="campaign-more__icon"></div><span>Приостановить кампанию</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                            </svg><span>Отчет по кампании</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn campaign-more__btn--del">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Перенести в архив</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell campaign-table__cell--show">
+                      <button class="campaign-table__btn-show">
+                        <svg width="15" height="15">
+                          <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                        </svg><span>Смотреть детали</span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="campaign-table__row">
+                    <td class="campaign-table__cell"><span class="campaign-table__name">Кампания Адмиралтейская</span><span class="campaign-table__date">Начало: 12.01.2020   11:30</span><span class="campaign-table__date">Окончание: 25.01.2020   18:00</span></td>
+                    <td class="campaign-table__cell campaign-table__cell--status">
+                      <button class="campaign-table__status" data-status="stop" data-drop>
+                        <svg width="12" height="12">
+                          <use xlink:href="assets/images/sprite.svg#square"></use>
+                        </svg>
+                      </button>
+                      <ul class="campaign-table__status-drop status-list">
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="stop">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#square"></use>
+                            </svg><span>Остановлена</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn" data-status="start">
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#triangle"></use>
+                            </svg><span>Запустить</span>
+                          </button>
+                        </li>
+                        <li class="status-list__item">
+                          <button class="status-list__btn status-list__btn--del" data-status="delete">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Архивировать</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Общий лимит</span><span class="campaign-table__value">150 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Дневной лимит</span><span class="campaign-table__value">6 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">Потрачено</span><span class="campaign-table__value">30 000 ₽</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">ОТС, чел.</span><span class="campaign-table__value">180 000</span></td>
+                    <td class="campaign-table__cell"> <span class="campaign-table__caption">eCPM</span><span class="campaign-table__value">238 ₽</span></td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Статистика</span><a class="campaign-table__link-down" href="#"> 
+                        <svg class="campaign-table__stat" width="24" height="24">
+                          <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                        </svg></a></td>
+                    <td class="campaign-table__cell campaign-table__cell--more">
+                      <button class="campaign-table__more" data-drop><span class="campaign-table__dots"></span></button>
+                      <ul class="campaign-table__drop campaign-more">
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                            </svg><span>Редактировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="13">
+                              <use xlink:href="assets/images/sprite.svg#icon-copy"></use>
+                            </svg><span>Дублировать</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <div class="campaign-more__icon"></div><span>Приостановить кампанию</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                            </svg><span>Отчет по кампании</span>
+                          </button>
+                        </li>
+                        <li class="campaign-more__item">
+                          <button class="campaign-more__btn campaign-more__btn--del">
+                            <svg width="12" height="12">
+                              <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                            </svg><span>Перенести в архив</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="campaign-table__cell campaign-table__cell--show">
+                      <button class="campaign-table__btn-show">
+                        <svg width="15" height="15">
+                          <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                        </svg><span>Смотреть детали           </span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="campaign-table__foot">
+                  <tr class="campaign-table__foot-row">
+                    <td class="campaign-table__cell">Всего 6 кампаний</td>
+                    <td class="campaign-table__cell"></td>
+                    <td class="campaign-table__cell">900 000 ₽</td>
+                    <td class="campaign-table__cell">36 000 ₽</td>
+                    <td class="campaign-table__cell">180 000 ₽</td>
+                    <td class="campaign-table__cell">1 008 000</td>
+                    <td class="campaign-table__cell">238₽</td>
+                    <td class="campaign-table__cell"><span class="campaign-table__caption">Статистика</span><a class="campaign-table__link-down" href="#">
+                        <svg class="campaign-table__stat" width="24" height="24">
+                          <use xlink:href="assets/images/sprite.svg#statistic"></use>
+                        </svg></a></td>
+                    <td class="campaign-table__cell"></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="campaign__pagination">
+              <ul class="campaign__pagination-list pagination-list">
+                <li class="pagination-list__item"><a class="pagination-list__link active" href="#">1</a></li>
+                <li class="pagination-list__item"><a class="pagination-list__link" href="#">2</a></li>
+                <li class="pagination-list__item"><a class="pagination-list__link" href="#">3</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__container footer__container--top container">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="#">О сервисе</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Такси</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Рекламодателям</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Кейсы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Новости</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__container footer__container--bottom container">
+            <ul class="footer__social-list social-list">
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="8" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="9">
+                    <use xlink:href="assets/images/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="12">
+                    <use xlink:href="assets/images/sprite.svg#icon-tw"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-ig"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="11">
+                    <use xlink:href="assets/images/sprite.svg#icon-yt"></use>
+                  </svg></a></li>
+            </ul><a class="footer__link" href="#">Пользовательское соглашение</a>
+            <p class="footer__text">Сайт сделал: <a class="footer__link" href="#">RA-Studio</a></p>
+          </div>
+        </div>
+      </footer>
+      <div class="popup popup-noty">
+        <div class="popup-wrap">
+          <section class="popup-success">
+            <div class="popup-success__container">
+              <h2 class="popup-success__title popup__title">Ваше сообщение успешно отправлено!</h2>
+              <p class="popup-success__text">Мы свяжемся с вами в течении 20 минут</p>
+              <div class="popup-success__img-wrap"><img class="popup-success__img" src="assets/images/popup-img-min.png" alt=""></div>
+              <button class="popup-success__btn popup__close" type="button" aria-label="Зыкрыть">
+                <svg class="popup__close-icon" width="13" height="13">
+                  <use xlink:href="assets/images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="popup popup-blank">
+        <div class="popup-wrap">
+          <section class="popup-form">
+            <div class="popup-form__container">
+              <h2 class="popup-form__title popup__title">Отправить заявку на подключение</h2>
+              <form class="form__list" action="#" method="#" onsubmit="return false">
+                <div class="form__item">
+                  <input class="form__input" type="text" name="name" id="name">
+                  <label class="form__label" for="name">Имя</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="tel" name="tel" id="tel" data-type="tel" data-required>
+                  <label class="form__label" for="tel">Телефон</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="email" name="email" id="email" data-type="email" data-required>
+                  <label class="form__label" for="email">E-mail</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="text" name="theme" id="theme">
+                  <label class="form__label" for="theme">Тема</label>
+                </div>
+                <div class="form__item">
+                  <textarea class="form__input" name="message" id="message"></textarea>
+                  <label class="form__label" for="message">Сообщение</label>
+                </div>
+                <button class="form__btn btn btn--blue" type="submit">Отправить</button>
+              </form>
+              <button class="popup-form__btn popup__close" type="button" aria-label="Зыкрыть">
+                <svg class="popup__close-icon" width="13" height="13">
+                  <use xlink:href="assets/images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/imask.min.js"></script>
+    <script src="assets/scripts/accordion.min.js"></script>
+    <script src="assets/scripts/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/medium-zoom.min.js"></script>
+    <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/smoothscroll.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>

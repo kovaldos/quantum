@@ -1,0 +1,21 @@
+.case {
+    margin-top: 100px;
+}
+.case-item__slider {
+    position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+    .case .advertisers-cases__list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .case {
+        margin-top: 60px;
+    }
+    .case .advertisers-cases__list {
+        grid-template-columns: 1fr;
+    }
+}

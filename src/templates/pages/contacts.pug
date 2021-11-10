@@ -1,0 +1,63 @@
+extends ../template
+
+block variables
+    - var title = 'Контакты'
+
+block content
+    main.contacts-page
+        section.page-banner
+            .page-banner__img-wrap
+                img.page-banner__img(src="assets/images/page-banner-min.jpg", alt="Баннер")
+            .page-banner__container.container
+                .breadcrumbs
+                    include ../components/breadcrumbs.pug
+                .page-banner__title-wrap
+                    h1.pages-banner__title.h1 Контакты
+        
+        section.contacts
+            .contacts__container.container
+                .contacts__top
+                    .contacts__wrap
+                        h2.contacts__title.h2 Наши контакты
+                        p.contacts__text Если у вас остались вопросы — позвоните нам или заполните форму и мы свяжемся с вами в ближайшее время.
+                        ul.contacts__list
+                            li.contacts__item
+                                .contacts__icon
+                                    svg(width="20" height="29")
+                                        use(xlink:href="assets/images/sprite.svg#map-marker")
+                                address.contacts__address Москва, Литейный проспект 167, оф.265
+                            li.contacts__item
+                                .contacts__icon
+                                    svg(width="22" height="17")
+                                        use(xlink:href="assets/images/sprite.svg#email")
+                                a.contacts__link(href="mailto:example@mail.ru") example@mail.ru
+                            li.contacts__item
+                                .contacts__icon
+                                    svg(width="22" height="22")
+                                        use(xlink:href="assets/images/sprite.svg#telephone")
+                                a.contacts__link(href="tel:+7812111-22-33") 8 (812) 111-22-33
+                            li.contacts__item
+                                .contacts__icon
+                                    svg(width="23" height="23")
+                                        use(xlink:href="assets/images/sprite.svg#whatsapp")
+                                a.contacts__link(href="tel:+7812111-22-33") 8 (812) 111-22-33
+                    .contacts__form
+                        form.form__list(action="#" method="#" onsubmit="return false")
+                            .form__item
+                                input.form__input(type="text" name="name" id="name")
+                                label.form__label(for="name") Имя
+                            .form__item
+                                input.form__input(type="tel" name="tel" id="tel" data-type="tel" data-required)
+                                label.form__label(for="tel") Телефон
+                            .form__item
+                                input.form__input(type="email" name="email" id="email" data-type="email" data-required)
+                                label.form__label(for="email") E-mail
+                            .form__item
+                                input.form__input(type="text" name="theme" id="theme")
+                                label.form__label(for="theme") Тема
+                            .form__item
+                                textarea.form__input(name="message" id="message")
+                                label.form__label(for="message") Сообщение
+                            button.form__btn.btn.btn--blue(type="submit") Отправить
+                .contacts__map
+                    img.contacts__map-img(src="assets/images/contacts__map-min.png", alt="Карта")

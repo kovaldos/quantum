@@ -1,0 +1,75 @@
+.taxi {
+    .layout-top__container {
+        justify-content: flex-end;
+    }
+}
+
+.taxi-how {
+    .how-works__title {
+        max-width: 690px;
+    }
+}
+
+.taxi-tabs {
+    .tabs-list__item {
+        padding: 19px 45px;
+        column-gap: 20px;
+    }
+}
+.tabs-list__left {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $color-grey3;
+    }
+}
+.tabs-list__num {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: $color-blue;
+}
+
+@media screen and (max-width: 1200px) {
+    .taxi-tabs .tabs__item {
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+    }
+    .taxi-tabs .tabs-list__item {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        padding: 19px 20px;
+        text-align: center;
+    }
+    .tabs-list__left {
+        justify-content: center;
+        padding: 0;
+    }
+    .tabs-list__left::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .taxi-how .how-works__list {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 28px;
+        grid-auto-flow: inherit;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .taxi-how .how-works__list {
+        grid-template-columns: 1fr;
+    }
+}

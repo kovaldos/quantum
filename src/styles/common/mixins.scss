@@ -1,0 +1,28 @@
+@mixin list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin hover-blue {
+    &:hover {
+        color: $color-white;
+        background-color: $color-blue;
+        transition: all 0.2s ease 0s;
+    }
+}
+
+@mixin hover-white {
+    &:hover {
+        color: $color-super-black;
+        background-color: $color-white;
+        transition: all 0.2s ease 0s;
+    }
+}
+
+@mixin hover-black {
+    &:hover {
+        background-color: $color-super-black;
+        transition: all 0.2s ease 0s;
+    }
+}

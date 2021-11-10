@@ -1,0 +1,24 @@
+.map-site {
+    .container {
+        position: relative;
+        display: flex;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow-x: scroll;
+    }
+}
+.map-site__table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding: 20px;
+}
+.map-site__cell {
+    border: 1px solid $color-black;
+}
+.map-site__link {
+    display: flex;
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-black;
+    padding: 20px;
+}

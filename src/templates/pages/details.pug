@@ -1,0 +1,46 @@
+extends ../template
+
+block variables
+    - var title = 'Детали'
+
+block content
+    main.details-page
+        section.details
+            .container
+                .details__top.details-top
+                    button.details-top__btn.btn.btn--blue Сохранить изменения по кампании
+                    .details-top__wrap
+                        h1.details-top__title.h2 Кампания Адмиралтейская
+                        button.details-top__btn-edit
+                            svg(width="18" height="18")
+                                use(xlink:href="assets/images/sprite.svg#icon-pen")
+                            span.details-top__btn-text Редактировать наименование
+                .details__tab-wrap.tabs__wrap(data-tab)
+                    .details__tab-top
+                        .details__tab-nav
+                            label.details__tab-btn
+                                input.visually-hidden(type="radio" name="tab-link" value="details" data-nav-tab="tab-detail" checked)
+                                span.details__tab-caption Детали
+                            label.details__tab-btn
+                                input.visually-hidden(type="radio" name="tab-link" value="content" data-nav-tab="tab-content")
+                                span.details__tab-caption Контент
+                        .details__table.details-table
+                            span.details-table__caption Прогнозируемые показатели
+                            ul.details-table__row
+                                li.details-table__cell
+                                    span.details-table__num 250 тыс.
+                                    span.details-table__text Показов
+                                li.details-table__cell
+                                    span.details-table__num 26 Р
+                                    span.details-table__text CPM
+                                li.details-table__cell
+                                    span.details-table__num 25 000 Р
+                                    span.details-table__text Бюджет кампании
+                                li.details-table__cell
+                                    span.details-table__num 180
+                                    span.details-table__text Экранов
+                    .details__tab-content
+                        .details__tab-item.tab-details.active(data-item-tab="tab-detail")
+                            include ../components/tab-details.pug
+                        .details__tab-item.tab-content(data-item-tab="tab-content")
+                            include ../components/tab-content.pug

@@ -1,0 +1,131 @@
+extends ../template
+
+block variables
+    - var title = 'Сервис'
+
+block content
+    main.service-page
+        section.page-banner
+            .page-banner__img-wrap
+                img.page-banner__img(src="assets/images/page-banner-min.jpg", alt="Баннер")
+            .page-banner__container.container
+                .breadcrumbs
+                    include ../components/breadcrumbs.pug
+                .page-banner__title-wrap
+                    h1.pages-banner__title.h1 О сервисе
+
+        section.how
+            .how__container.container
+                h2.how__title.h2 Как работает система LED экранов для вашего бизнеса
+                p.how__text Quantom знает все вокруг и это работает эффективно
+
+                ul.how__list.how-list
+                    li.how-list__item
+                        img.how-list__img(src="assets/images/how-1-min.jpg", alt="")
+                    li.how-list__item
+                        svg.how-list__icon(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#message-circle")
+                        h3.how-list__subtitle Новая площадка
+                        p.how-list__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim nibh ac sollicitudin purus augue. Consectetur nulla dui ornare sed consequat adipiscing vitae.
+                    li.how-list__item
+                        img.how-list__img(src="assets/images/how-2-min.jpg", alt="")
+                    li.how-list__item
+                        img.how-list__img(src="assets/images/how-3-min.jpg", alt="")
+                    li.how-list__item
+                        svg.how-list__icon(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#users")
+                        h3.how-list__subtitle Новая площадка
+                        p.how-list__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim nibh ac sollicitudin purus augue. Consectetur nulla dui ornare sed consequat adipiscing vitae.
+                    li.how-list__item
+                        img.how-list__img(src="assets/images/how-4-min.jpg", alt="")
+                    li.how-list__item
+                        svg.how-list__icon(width="60" height="60")
+                            use(xlink:href="assets/images/sprite.svg#map")
+                        h3.how-list__subtitle Новая площадка
+                        p.how-list__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim nibh ac sollicitudin purus augue. Consectetur nulla dui ornare sed consequat adipiscing vitae.
+                    li.how-list__item
+                        img.how-list__img(src="assets/images/how-5-min.jpg", alt="")
+
+        section.advertising
+            .advertising__container.container
+                .advertising__text-wrap
+                    h3.advertising__subtitle.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    p.advertising__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim nibh ac sollicitudin purus augue. Consectetur nulla dui ornare sed consequat adipiscing vitae. Cras viverra dictum purus felis scelerisque blandit. Accumsan aliquam non ultricies morbi morbi vitae praesent.
+                    p.advertising__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu enim nibh ac sollicitudin purus augue. Consectetur nulla dui ornare sed consequat adipiscing vitae. Cras viverra dictum purus felis scelerisque blandit. Accumsan aliquam non ultricies morbi morbi vitae praesent.
+                .advertising__img-wrap
+                    img.advertising__img(src="assets/images/banner-logo-white-min.png", alt="")
+
+        section.service-slider
+            .service-slider__container.container
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .service-slider__img-wrap
+                                img.service-slider__img(src="assets/images/tab-banner-min.png", alt="")
+                        .swiper-slide
+                            .service-slider__img-wrap
+                                img.service-slider__img(src="assets/images/tab-banner-min.png", alt="")
+                        .swiper-slide
+                            .service-slider__img-wrap
+                                img.service-slider__img(src="assets/images/tab-banner-min.png", alt="")
+                .swiper-button-prev
+                .swiper-button-next
+
+        section.service-tabs.tabs
+            .tabs__container.container
+                h2.tabs__title.h2 Возможности
+                .tabs__wrap(data-tab)
+                    .tabs__nav
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="taxi" data-nav-tab="tab-1" checked)
+                            span.tabs__name Для таксопарков
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="business" data-nav-tab="tab-2")
+                            span.tabs__name Для бизнеса
+                        label.tabs__label
+                            input.tabs__input.visually-hidden(type="radio" name="tab-name" value="advertiser" data-nav-tab="tab-3")
+                            span.tabs__name Для рекламодателей
+                    .tabs__content 
+                        ul.tabs__item.tabs-list.active(data-item-tab="tab-1")
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#salary")
+                                h3.tabs-list__caption Дополнительный заработок
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#giftbox")
+                                h3.tabs-list__caption Бесплатное подключение Бесплатное подключение
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#battery")
+                                h3.tabs-list__caption Экран работает автономно
+                        ul.tabs__item.tabs-list(data-item-tab="tab-2")
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#salary")
+                                h3.tabs-list__caption Дополнительный заработок
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#giftbox")
+                                h3.tabs-list__caption Бесплатное подключение
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#battery")
+                                h3.tabs-list__caption Экран работает автономно
+                        ul.tabs__item.tabs-list(data-item-tab="tab-3")
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#salary")
+                                h3.tabs-list__caption Дополнительный заработок Дополнительный заработок
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#giftbox")
+                                h3.tabs-list__caption Бесплатное подключение
+                            li.tabs-list__item
+                                svg.tabs-list__icon(width="60" height="60")
+                                    use(xlink:href="assets/images/sprite.svg#battery")
+                                h3.tabs-list__caption Экран работает автономно
+            .tabs__banner
+                img.tabs__img(src="assets/images/tab-banner-min.png", alt="")
+
+        include ../components/form.pug

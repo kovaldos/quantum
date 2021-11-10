@@ -1,0 +1,581 @@
+extends ../template
+
+block variables
+    - var title = 'Кампании'
+
+block content
+    main.campaign-page
+        section.campaign
+            .campaign__container.container
+                .campaign__top
+                    h1.campaign__title.h2 Мои кампании
+                    button.campaign__btn.btn.btn--black Создать новую кампанию
+                .campaign__filter.filter
+                    h2.filter__caption Фильтрация
+                    form.filter__wrap(action="#" method="#" onsubmit="return false")
+                        .filter__select.form__item(data-form-item)
+                            select.form__input(name="status" data-form-input)
+                                option(value="")
+                                option(value="Остановлен") Остановлен
+                            span.form__label(data-form-label) Все статусы
+                            svg(width="14" height="14")
+                                use(xlink:href="assets/images/sprite.svg#chevron")
+
+                        .filter__search.form__item
+                            input.form__input(type="search")
+                            label.form__label Поиск кампании
+
+                        .filter__output
+                            span Выводить по:
+                            select(name="output")
+                                option(value="10") 10
+                            svg(width="14" height="14")
+                                use(xlink:href="assets/images/sprite.svg#chevron")
+                        
+                        .filter__archive
+                            button.filter__archive-btn Архив кампаний
+                            .filter__archive-wrap
+                                button.filter__date-btn(data-drop)
+                                    svg(width="20" height="20")
+                                        use(xlink:href="assets/images/sprite.svg#small-calendar")
+                                    span Период: 12.12.2021 - 13.15.2022
+                                .filter__date-wrap.date-drop
+                                    h3.date-drop__caption Выберите период
+                                    .date-drop__list
+                                        label.date-drop__item
+                                            input.visually-hidden(type="radio" name="time" value="all-time")
+                                            span За все время
+                                        label.date-drop__item
+                                            input.visually-hidden(type="radio" name="time" value="curr-month")
+                                            span Этот месяц
+                                        label.date-drop__item
+                                            input.visually-hidden(type="radio" name="time" value="last-month")
+                                            span Предыдущий месяц
+                                        label.date-drop__item
+                                            input.visually-hidden(type="radio" name="time" value="curr-year")
+                                            span Текущий год
+                                        label.date-drop__item
+                                            input.visually-hidden(type="radio" name="time" value="last-year")
+                                            span Прошлый год
+                                    
+                                    .date-drop__range
+                                        span.date-drop__range-caption Или введите свой период
+                                        .date-drop__range-list
+                                            .date-drop__range-item.form__item
+                                                input.form__input(type="text")
+                                                label.form__label От
+                                            .date-drop__range-item.form__item
+                                                input.form__input(type="text")
+                                                label.form__label До
+                                                    
+                                    button.date-drop__btn.btn.btn--black Выбрать
+
+                .campaign__table-wrap
+                    table.campaign__table.campaign-table
+                        thead.campaign-table__head
+                            tr.campaign-table__head-row
+                                th.campaign-table__head-cell Имя кампании
+                                th.campaign-table__head-cell Статус
+                                th.campaign-table__head-cell.campaign-table__head-cell--hint
+                                    span.campaign-table__head-caption Общий лимит
+                                    span.campaign-table__head-hint 
+                                        a(href="#") ?
+                                th.campaign-table__head-cell Дневной лимит
+                                th.campaign-table__head-cell Потрачено
+                                th.campaign-table__head-cell ОТС, чел.
+                                th.campaign-table__head-cell eCPM
+                                th.campaign-table__head-cell Статистика
+                        tbody.campaign-table__body
+                            tr.campaign-table__row
+                                td.campaign-table__cell
+                                    span.campaign-table__name Кампания Адмиралтейская
+                                    span.campaign-table__date Начало: 12.01.2020   11:30
+                                    span.campaign-table__date Окончание: 25.01.2020   18:00
+                                td.campaign-table__cell.campaign-table__cell--status
+                                    button.campaign-table__status(data-status="stop" data-drop)
+                                        svg(width="12" height="12")
+                                            use(xlink:href="assets/images/sprite.svg#square")
+                                    ul.campaign-table__status-drop.status-list
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="stop")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#square")
+                                                span Остановлена
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="start")
+                                                svg(width="14" height="14")
+                                                    use(xlink:href="assets/images/sprite.svg#triangle")
+                                                span Запустить
+                                        li.status-list__item
+                                            button.status-list__btn.status-list__btn--del(data-status="delete")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Архивировать
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Общий лимит
+                                    span.campaign-table__value 150 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Дневной лимит
+                                    span.campaign-table__value 6 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Потрачено
+                                    span.campaign-table__value 30 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption ОТС, чел.
+                                    span.campaign-table__value 180 000
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption eCPM
+                                    span.campaign-table__value 238 ₽
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Статистика
+                                    a.campaign-table__link-down(href="#") 
+                                        svg.campaign-table__stat(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#statistic")
+                                td.campaign-table__cell.campaign-table__cell--more
+                                    button.campaign-table__more(data-drop)
+                                        span.campaign-table__dots
+                                    ul.campaign-table__drop.campaign-more
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-pen")
+                                                span Редактировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="13")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-copy")
+                                                span Дублировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                .campaign-more__icon
+                                                span Приостановить кампанию
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#statistic")
+                                                span Отчет по кампании
+                                        li.campaign-more__item
+                                            button.campaign-more__btn.campaign-more__btn--del
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Перенести в архив
+                                td.campaign-table__cell.campaign-table__cell--show
+                                    button.campaign-table__btn-show
+                                        svg(width="15" height="15")
+                                            use(xlink:href="assets/images/sprite.svg#chevron")
+                                        span Смотреть детали
+                            tr.campaign-table__row
+                                td.campaign-table__cell
+                                    span.campaign-table__name Кампания Адмиралтейская
+                                    span.campaign-table__date Начало: 12.01.2020   11:30
+                                    span.campaign-table__date Окончание: 25.01.2020   18:00
+                                td.campaign-table__cell.campaign-table__cell--status
+                                    button.campaign-table__status(data-status="stop" data-drop)
+                                        svg(width="12" height="12")
+                                            use(xlink:href="assets/images/sprite.svg#square")
+                                    ul.campaign-table__status-drop.status-list
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="stop" data-drop)
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#square")
+                                                span Остановлена
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="start")
+                                                svg(width="14" height="14")
+                                                    use(xlink:href="assets/images/sprite.svg#triangle")
+                                                span Запустить
+                                        li.status-list__item
+                                            button.status-list__btn.status-list__btn--del(data-status="delete")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Архивировать
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Общий лимит
+                                    span.campaign-table__value 150 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Дневной лимит
+                                    span.campaign-table__value 6 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Потрачено
+                                    span.campaign-table__value 30 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption ОТС, чел.
+                                    span.campaign-table__value 180 000
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption eCPM
+                                    span.campaign-table__value 238 ₽
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Статистика
+                                    a.campaign-table__link-down(href="#") 
+                                        svg.campaign-table__stat(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#statistic")
+                                td.campaign-table__cell.campaign-table__cell--more
+                                    button.campaign-table__more(data-drop)
+                                        span.campaign-table__dots
+                                    ul.campaign-table__drop.campaign-more
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-pen")
+                                                span Редактировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="13")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-copy")
+                                                span Дублировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                .campaign-more__icon
+                                                span Приостановить кампанию
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#statistic")
+                                                span Отчет по кампании
+                                        li.campaign-more__item
+                                            button.campaign-more__btn.campaign-more__btn--del
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Перенести в архив
+                                td.campaign-table__cell.campaign-table__cell--show
+                                    button.campaign-table__btn-show
+                                        svg(width="15" height="15")
+                                            use(xlink:href="assets/images/sprite.svg#chevron")
+                                        span Смотреть детали
+                            tr.campaign-table__row
+                                td.campaign-table__cell
+                                    span.campaign-table__name Кампания Адмиралтейская
+                                    span.campaign-table__date Начало: 12.01.2020   11:30
+                                    span.campaign-table__date Окончание: 25.01.2020   18:00
+                                td.campaign-table__cell.campaign-table__cell--status
+                                    button.campaign-table__status(data-status="stop" data-drop)
+                                        svg(width="12" height="12")
+                                            use(xlink:href="assets/images/sprite.svg#square")
+                                    ul.campaign-table__status-drop.status-list
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="stop")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#square")
+                                                span Остановлена
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="start")
+                                                svg(width="14" height="14")
+                                                    use(xlink:href="assets/images/sprite.svg#triangle")
+                                                span Запустить
+                                        li.status-list__item
+                                            button.status-list__btn.status-list__btn--del(data-status="delete")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Архивировать
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Общий лимит
+                                    span.campaign-table__value 150 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Дневной лимит
+                                    span.campaign-table__value 6 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Потрачено
+                                    span.campaign-table__value 30 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption ОТС, чел.
+                                    span.campaign-table__value 180 000
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption eCPM
+                                    span.campaign-table__value 238 ₽
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Статистика
+                                    a.campaign-table__link-down(href="#") 
+                                        svg.campaign-table__stat(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#statistic")
+                                td.campaign-table__cell.campaign-table__cell--more
+                                    button.campaign-table__more(data-drop)
+                                        span.campaign-table__dots
+                                    ul.campaign-table__drop.campaign-more
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-pen")
+                                                span Редактировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="13")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-copy")
+                                                span Дублировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                .campaign-more__icon
+                                                span Приостановить кампанию
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#statistic")
+                                                span Отчет по кампании
+                                        li.campaign-more__item
+                                            button.campaign-more__btn.campaign-more__btn--del
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Перенести в архив
+                                td.campaign-table__cell.campaign-table__cell--show
+                                    button.campaign-table__btn-show
+                                        svg(width="15" height="15")
+                                            use(xlink:href="assets/images/sprite.svg#chevron")
+                                        span Смотреть детали
+                            tr.campaign-table__row
+                                td.campaign-table__cell
+                                    span.campaign-table__name Кампания Адмиралтейская
+                                    span.campaign-table__date Начало: 12.01.2020   11:30
+                                    span.campaign-table__date Окончание: 25.01.2020   18:00
+                                td.campaign-table__cell.campaign-table__cell--status
+                                    button.campaign-table__status(data-status="stop" data-drop)
+                                        svg(width="12" height="12")
+                                            use(xlink:href="assets/images/sprite.svg#square")
+                                    ul.campaign-table__status-drop.status-list
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="stop")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#square")
+                                                span Остановлена
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="start")
+                                                svg(width="14" height="14")
+                                                    use(xlink:href="assets/images/sprite.svg#triangle")
+                                                span Запустить
+                                        li.status-list__item
+                                            button.status-list__btn.status-list__btn--del(data-status="delete")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Архивировать
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Общий лимит
+                                    span.campaign-table__value 150 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Дневной лимит
+                                    span.campaign-table__value 6 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Потрачено
+                                    span.campaign-table__value 30 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption ОТС, чел.
+                                    span.campaign-table__value 180 000
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption eCPM
+                                    span.campaign-table__value 238 ₽
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Статистика
+                                    a.campaign-table__link-down(href="#") 
+                                        svg.campaign-table__stat(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#statistic")
+                                td.campaign-table__cell.campaign-table__cell--more
+                                    button.campaign-table__more(data-drop)
+                                        span.campaign-table__dots
+                                    ul.campaign-table__drop.campaign-more
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-pen")
+                                                span Редактировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="13")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-copy")
+                                                span Дублировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                .campaign-more__icon
+                                                span Приостановить кампанию
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#statistic")
+                                                span Отчет по кампании
+                                        li.campaign-more__item
+                                            button.campaign-more__btn.campaign-more__btn--del
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Перенести в архив
+                                td.campaign-table__cell.campaign-table__cell--show
+                                    button.campaign-table__btn-show
+                                        svg(width="15" height="15")
+                                            use(xlink:href="assets/images/sprite.svg#chevron")
+                                        span Смотреть детали
+                            tr.campaign-table__row
+                                td.campaign-table__cell
+                                    span.campaign-table__name Кампания Адмиралтейская
+                                    span.campaign-table__date Начало: 12.01.2020   11:30
+                                    span.campaign-table__date Окончание: 25.01.2020   18:00
+                                td.campaign-table__cell.campaign-table__cell--status
+                                    button.campaign-table__status(data-status="stop" data-drop)
+                                        svg(width="12" height="12")
+                                            use(xlink:href="assets/images/sprite.svg#square")
+                                    ul.campaign-table__status-drop.status-list
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="stop")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#square")
+                                                span Остановлена
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="start")
+                                                svg(width="14" height="14")
+                                                    use(xlink:href="assets/images/sprite.svg#triangle")
+                                                span Запустить
+                                        li.status-list__item
+                                            button.status-list__btn.status-list__btn--del(data-status="delete")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Архивировать
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Общий лимит
+                                    span.campaign-table__value 150 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Дневной лимит
+                                    span.campaign-table__value 6 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Потрачено
+                                    span.campaign-table__value 30 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption ОТС, чел.
+                                    span.campaign-table__value 180 000
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption eCPM
+                                    span.campaign-table__value 238 ₽
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Статистика
+                                    a.campaign-table__link-down(href="#") 
+                                        svg.campaign-table__stat(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#statistic")
+                                td.campaign-table__cell.campaign-table__cell--more
+                                    button.campaign-table__more(data-drop)
+                                        span.campaign-table__dots
+                                    ul.campaign-table__drop.campaign-more
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-pen")
+                                                span Редактировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="13")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-copy")
+                                                span Дублировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                .campaign-more__icon
+                                                span Приостановить кампанию
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#statistic")
+                                                span Отчет по кампании
+                                        li.campaign-more__item
+                                            button.campaign-more__btn.campaign-more__btn--del
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Перенести в архив
+                                td.campaign-table__cell.campaign-table__cell--show
+                                    button.campaign-table__btn-show
+                                        svg(width="15" height="15")
+                                            use(xlink:href="assets/images/sprite.svg#chevron")
+                                        span Смотреть детали
+                            tr.campaign-table__row
+                                td.campaign-table__cell
+                                    span.campaign-table__name Кампания Адмиралтейская
+                                    span.campaign-table__date Начало: 12.01.2020   11:30
+                                    span.campaign-table__date Окончание: 25.01.2020   18:00
+                                td.campaign-table__cell.campaign-table__cell--status
+                                    button.campaign-table__status(data-status="stop" data-drop)
+                                        svg(width="12" height="12")
+                                            use(xlink:href="assets/images/sprite.svg#square")
+                                    ul.campaign-table__status-drop.status-list
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="stop")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#square")
+                                                span Остановлена
+                                        li.status-list__item
+                                            button.status-list__btn(data-status="start")
+                                                svg(width="14" height="14")
+                                                    use(xlink:href="assets/images/sprite.svg#triangle")
+                                                span Запустить
+                                        li.status-list__item
+                                            button.status-list__btn.status-list__btn--del(data-status="delete")
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Архивировать
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Общий лимит
+                                    span.campaign-table__value 150 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Дневной лимит
+                                    span.campaign-table__value 6 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption Потрачено
+                                    span.campaign-table__value 30 000 ₽
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption ОТС, чел.
+                                    span.campaign-table__value 180 000
+                                td.campaign-table__cell 
+                                    span.campaign-table__caption eCPM
+                                    span.campaign-table__value 238 ₽
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Статистика
+                                    a.campaign-table__link-down(href="#") 
+                                        svg.campaign-table__stat(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#statistic")
+                                td.campaign-table__cell.campaign-table__cell--more
+                                    button.campaign-table__more(data-drop)
+                                        span.campaign-table__dots
+                                    ul.campaign-table__drop.campaign-more
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-pen")
+                                                span Редактировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="13")
+                                                    use(xlink:href="assets/images/sprite.svg#icon-copy")
+                                                span Дублировать
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                .campaign-more__icon
+                                                span Приостановить кампанию
+                                        li.campaign-more__item
+                                            button.campaign-more__btn
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#statistic")
+                                                span Отчет по кампании
+                                        li.campaign-more__item
+                                            button.campaign-more__btn.campaign-more__btn--del
+                                                svg(width="12" height="12")
+                                                    use(xlink:href="assets/images/sprite.svg#garbage-can")
+                                                span Перенести в архив
+                                td.campaign-table__cell.campaign-table__cell--show
+                                    button.campaign-table__btn-show
+                                        svg(width="15" height="15")
+                                            use(xlink:href="assets/images/sprite.svg#chevron")
+                                        span Смотреть детали           
+
+                        tfoot.campaign-table__foot
+                            tr.campaign-table__foot-row
+                                td.campaign-table__cell Всего 6 кампаний
+                                td.campaign-table__cell
+                                td.campaign-table__cell 900 000 ₽
+                                td.campaign-table__cell 36 000 ₽
+                                td.campaign-table__cell 180 000 ₽
+                                td.campaign-table__cell 1 008 000
+                                td.campaign-table__cell 238₽
+                                td.campaign-table__cell
+                                    span.campaign-table__caption Статистика
+                                    a.campaign-table__link-down(href="#")
+                                        svg.campaign-table__stat(width="24" height="24")
+                                            use(xlink:href="assets/images/sprite.svg#statistic")
+                                td.campaign-table__cell
+                                    
+                .campaign__pagination
+                    ul.campaign__pagination-list.pagination-list
+                        li.pagination-list__item
+                            a.pagination-list__link.active(href="#") 1
+                        li.pagination-list__item
+                            a.pagination-list__link(href="#") 2
+                        li.pagination-list__item
+                            a.pagination-list__link(href="#") 3

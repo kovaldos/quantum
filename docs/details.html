@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Детали</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="stylesheet" type="text/css" href="assets/styles/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/app.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container container"><a class="header__logo" href="#">
+            <svg class="header__svg" width="200" height="63">
+              <use xlink:href="assets/images/sprite.svg#logo"></use>
+            </svg></a>
+          <button class="header__toggle" type="button" aria-label="Меню"><span class="header__toggle-middle"></span></button>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="#">О сервисе</a></li>
+              <li class="header__item"><a class="header__link" href="#">Рекламодателям</a></li>
+              <li class="header__item"><a class="header__link" href="#">Такси</a></li>
+              <li class="header__item"><a class="header__link" href="#">Кейсы</a></li>
+              <li class="header__item"><a class="header__link" href="#">Новости</a></li>
+              <li class="header__item"><a class="header__link" href="#">Контакты</a></li>
+            </ul><a class="header__btn btn btn--blue" href="#">Войти</a>
+            <ul class="header__social-list social-list">
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="8" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="9">
+                    <use xlink:href="assets/images/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="12">
+                    <use xlink:href="assets/images/sprite.svg#icon-tw"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-ig"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="11">
+                    <use xlink:href="assets/images/sprite.svg#icon-yt"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="details-page">
+        <section class="details">
+          <div class="container">
+            <div class="details__top details-top">
+              <button class="details-top__btn btn btn--blue">Сохранить изменения по кампании</button>
+              <div class="details-top__wrap">
+                <h1 class="details-top__title h2">Кампания Адмиралтейская</h1>
+                <button class="details-top__btn-edit">
+                  <svg width="18" height="18">
+                    <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                  </svg><span class="details-top__btn-text">Редактировать наименование</span>
+                </button>
+              </div>
+            </div>
+            <div class="details__tab-wrap tabs__wrap" data-tab>
+              <div class="details__tab-top">
+                <div class="details__tab-nav">
+                  <label class="details__tab-btn">
+                    <input class="visually-hidden" type="radio" name="tab-link" value="details" data-nav-tab="tab-detail" checked><span class="details__tab-caption">Детали</span>
+                  </label>
+                  <label class="details__tab-btn">
+                    <input class="visually-hidden" type="radio" name="tab-link" value="content" data-nav-tab="tab-content"><span class="details__tab-caption">Контент</span>
+                  </label>
+                </div>
+                <div class="details__table details-table"><span class="details-table__caption">Прогнозируемые показатели</span>
+                  <ul class="details-table__row">
+                    <li class="details-table__cell"><span class="details-table__num">250 тыс.</span><span class="details-table__text">Показов</span></li>
+                    <li class="details-table__cell"><span class="details-table__num">26 Р</span><span class="details-table__text">CPM</span></li>
+                    <li class="details-table__cell"><span class="details-table__num">25 000 Р</span><span class="details-table__text">Бюджет кампании</span></li>
+                    <li class="details-table__cell"><span class="details-table__num">180</span><span class="details-table__text">Экранов</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="details__tab-content">
+                <div class="details__tab-item tab-details active" data-item-tab="tab-detail">
+                  <div class="tab-details__box">
+                    <h2 class="tab-details__title">График показа рекламной кампании</h2>
+                    <ul class="tab-details__list">
+                      <li class="tab-details__item">
+                        <form class="tab-details__wrap">
+                          <div class="form__item" data-form-item>
+                            <input class="form__input" type="text" data-form-input>
+                            <label class="form__label" data-form-label>Дата начала</label>
+                            <svg class="form__icon" width="20" height="20">
+                              <use xlink:href="assets/images/sprite.svg#small-calendar"></use>
+                            </svg>
+                          </div>
+                          <div class="tab-details__select-wrap form__item" data-form-item>
+                            <select class="form__input tab-details__select" name="time-start" data-form-input>
+                              <option value=""> </option>
+                              <option value="11:30">11:30</option>
+                            </select><span class="form__label" data-form-label>Время начала</span>
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="form__item">
+                            <input class="form__input" type="text">
+                            <label class="form__label">Дата окончания</label>
+                            <svg class="form__icon" width="20" height="20">
+                              <use xlink:href="assets/images/sprite.svg#small-calendar"></use>
+                            </svg>
+                          </div>
+                          <div class="tab-details__select-wrap form__item" data-form-item>
+                            <select class="form__input tab-details__select" name="time-start" data-form-input>
+                              <option value=""> </option>
+                              <option value="11:30">15:30</option>
+                            </select><span class="form__label" data-form-label>Время окончания</span>
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                            </svg>
+                          </div>
+                        </form>
+                        <button class="tab-details__btn btn btn--black">Добавить период</button>
+                      </li>
+                      <li class="tab-details__item">
+                        <form class="tab-details__wrap">
+                          <div class="form__item" data-form-item>
+                            <input class="form__input" type="text" data-form-input>
+                            <label class="form__label" data-form-label>Дата начала</label>
+                            <svg class="form__icon" width="20" height="20">
+                              <use xlink:href="assets/images/sprite.svg#small-calendar"></use>
+                            </svg>
+                          </div>
+                          <div class="tab-details__select-wrap form__item" data-form-item>
+                            <select class="form__input tab-details__select" name="time-start" data-form-input>
+                              <option value=""> </option>
+                              <option value="11:30">11:30</option>
+                            </select><span class="form__label" data-form-label>Время начала</span>
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="form__item">
+                            <input class="form__input" type="text">
+                            <label class="form__label">Дата окончания</label>
+                            <svg class="form__icon" width="20" height="20">
+                              <use xlink:href="assets/images/sprite.svg#small-calendar"></use>
+                            </svg>
+                          </div>
+                          <div class="tab-details__select-wrap form__item" data-form-item>
+                            <select class="form__input tab-details__select" name="time-start" data-form-input>
+                              <option value=""> </option>
+                              <option value="11:30">15:30</option>
+                            </select><span class="form__label" data-form-label>Время окончания</span>
+                            <svg width="14" height="14">
+                              <use xlink:href="assets/images/sprite.svg#chevron"></use>
+                            </svg>
+                          </div>
+                        </form>
+                        <div class="tab-details__more campaign-table__cell--more">
+                          <button class="campaign-table__more" data-drop><span class="campaign-table__dots"></span></button>
+                          <ul class="campaign-table__drop campaign-more">
+                            <li class="campaign-more__item">
+                              <button class="campaign-more__btn">
+                                <svg width="12" height="12">
+                                  <use xlink:href="assets/images/sprite.svg#icon-pen"></use>
+                                </svg><span>Редактировать</span>
+                              </button>
+                            </li>
+                            <li class="campaign-more__item">
+                              <button class="campaign-more__btn campaign-more__btn--del">
+                                <svg width="12" height="12">
+                                  <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                                </svg><span>Удалить</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-details__box">
+                    <h2 class="tab-details__title">Бюждет</h2>
+                    <ul class="tab-details__list budget-list">
+                      <li class="budget-list__item form__item">
+                        <input class="form__input" type="text">
+                        <label class="form__label">Общий бюджет</label>
+                      </li>
+                      <li class="budget-list__item form__item">
+                        <input class="form__input" type="text">
+                        <label class="form__label">Дневной бюджет</label>
+                      </li>
+                      <li class="budget-list__item form__item">
+                        <input class="form__input" type="text">
+                        <label class="form__label">Частота показов</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-details__box">
+                    <h2 class="tab-details__title">Геолокация</h2>
+                    <div class="tab-details__geo-wrap">
+                      <div class="tab-details__map-wrap"><img src="assets/images/geolocation-min.png" alt="">
+                        <ul class="tab-details__map-list">
+                          <li class="tab-details__map-item"><span class="tab-details__map-text">Машин в районе:</span><span class="tab-details__map-num">95</span></li>
+                          <li class="tab-details__map-item"><span class="tab-details__map-text">Среднее количество показов в день:</span><span class="tab-details__map-num">2 500</span></li>
+                        </ul>
+                      </div>
+                      <div class="tab-details__search-wrap">
+                        <form class="tab-details__search-form" action="#">
+                          <div class="tab-details__search form__item">
+                            <input class="form__input" type="search">
+                            <label class="form__label">Выбранная область</label>
+                          </div>
+                          <button class="tab-details__btn btn btn--black" type="submit">Добавить область</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="details__tab-item tab-content" data-item-tab="tab-content">
+                  <button class="tab-content__btn btn btn--black">Добавить контент из медиафайлов</button>
+                  <div class="tab-content__table-wrap">
+                    <table class="tab-content__table tab-table">
+                      <thead class="tab-table__head">
+                        <tr class="tab-table__head-row">
+                          <th class="tab-table__cell">Название файла</th>
+                          <th class="tab-table__cell">Разрешение<br> показываемого контента<br> (В х Ш)</th>
+                          <th class="tab-table__cell">Утвержденный<br> статус</th>
+                          <th class="tab-table__cell">Длительность<br> показа рекламы</th>
+                          <th class="tab-table__cell">Формат</th>
+                          <th class="tab-table__cell">Действия</th>
+                          <th class="tab-table__cell"> </th>
+                        </tr>
+                      </thead>
+                      <tbody class="tab-table__body">
+                        <tr class="tab-table__row">
+                          <td class="tab-table__cell"><span class="tab-table__caption">Название файла</span><span class="tab-table__val">Видео для кампании<br> на Адмиралтейской</span></td>
+                          <td class="tab-table__cell"> <span class="tab-table__caption">Разрешение<br> показываемого контента<br> (В х Ш)</span><span class="tab-table__val">320 х 240 px</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Утвержденный статус</span><span class="tab-table__val">На рассмотрении</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Длительность<br> показа рекламы</span><span class="tab-table__val">28 секунд</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Формат</span><span class="tab-table__val">Видео</span></td>
+                          <td class="tab-table__cell">
+                            <button class="tab-table__btn-reset btn btn--black">Отменить выбор</button>
+                          </td>
+                          <td class="tab-table__cell tab-table__cell--del">
+                            <button class="tab-table__btn-delete">
+                              <svg width="20" height="20">
+                                <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr class="tab-table__row">
+                          <td class="tab-table__cell"><span class="tab-table__caption">Название файла</span><span class="tab-table__val">Видео для кампании<br> на Адмиралтейской</span></td>
+                          <td class="tab-table__cell"> <span class="tab-table__caption">Разрешение<br> показываемого контента<br> (В х Ш)</span><span class="tab-table__val">320 х 240 px</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Утвержденный статус</span><span class="tab-table__val">Утвержден</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Длительность<br> показа рекламы</span><span class="tab-table__val">28 секунд</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Формат</span><span class="tab-table__val">Видео</span></td>
+                          <td class="tab-table__cell">
+                            <button class="tab-table__btn-reset btn btn--blue">Назначить контент</button>
+                          </td>
+                          <td class="tab-table__cell tab-table__cell--del">
+                            <button class="tab-table__btn-delete">
+                              <svg width="20" height="20">
+                                <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr class="tab-table__row">
+                          <td class="tab-table__cell"><span class="tab-table__caption">Название файла</span><span class="tab-table__val">Видео для кампании<br> на Адмиралтейской</span></td>
+                          <td class="tab-table__cell"> <span class="tab-table__caption">Разрешение<br> показываемого контента<br> (В х Ш)</span><span class="tab-table__val">320 х 240 px</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Утвержденный статус</span><span class="tab-table__val">Утвержден</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Длительность<br> показа рекламы</span><span class="tab-table__val">28 секунд</span></td>
+                          <td class="tab-table__cell"><span class="tab-table__caption">Формат</span><span class="tab-table__val">Видео</span></td>
+                          <td class="tab-table__cell">
+                            <button class="tab-table__btn-reset btn btn--blue">Назначить контент</button>
+                          </td>
+                          <td class="tab-table__cell tab-table__cell--del">
+                            <button class="tab-table__btn-delete">
+                              <svg width="20" height="20">
+                                <use xlink:href="assets/images/sprite.svg#garbage-can"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-content__sroll-icon"><img src="assets/images/scrolling.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__container footer__container--top container">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="#">О сервисе</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Такси</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Рекламодателям</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Кейсы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Новости</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__container footer__container--bottom container">
+            <ul class="footer__social-list social-list">
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="8" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="9">
+                    <use xlink:href="assets/images/sprite.svg#icon-vk"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="12">
+                    <use xlink:href="assets/images/sprite.svg#icon-tw"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="15">
+                    <use xlink:href="assets/images/sprite.svg#icon-ig"></use>
+                  </svg></a></li>
+              <li class="social-list__item"><a class="social-list__link" href="#">
+                  <svg class="social-list__icon" width="15" height="11">
+                    <use xlink:href="assets/images/sprite.svg#icon-yt"></use>
+                  </svg></a></li>
+            </ul><a class="footer__link" href="#">Пользовательское соглашение</a>
+            <p class="footer__text">Сайт сделал: <a class="footer__link" href="#">RA-Studio</a></p>
+          </div>
+        </div>
+      </footer>
+      <div class="popup popup-noty">
+        <div class="popup-wrap">
+          <section class="popup-success">
+            <div class="popup-success__container">
+              <h2 class="popup-success__title popup__title">Ваше сообщение успешно отправлено!</h2>
+              <p class="popup-success__text">Мы свяжемся с вами в течении 20 минут</p>
+              <div class="popup-success__img-wrap"><img class="popup-success__img" src="assets/images/popup-img-min.png" alt=""></div>
+              <button class="popup-success__btn popup__close" type="button" aria-label="Зыкрыть">
+                <svg class="popup__close-icon" width="13" height="13">
+                  <use xlink:href="assets/images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="popup popup-blank">
+        <div class="popup-wrap">
+          <section class="popup-form">
+            <div class="popup-form__container">
+              <h2 class="popup-form__title popup__title">Отправить заявку на подключение</h2>
+              <form class="form__list" action="#" method="#" onsubmit="return false">
+                <div class="form__item">
+                  <input class="form__input" type="text" name="name" id="name">
+                  <label class="form__label" for="name">Имя</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="tel" name="tel" id="tel" data-type="tel" data-required>
+                  <label class="form__label" for="tel">Телефон</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="email" name="email" id="email" data-type="email" data-required>
+                  <label class="form__label" for="email">E-mail</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__input" type="text" name="theme" id="theme">
+                  <label class="form__label" for="theme">Тема</label>
+                </div>
+                <div class="form__item">
+                  <textarea class="form__input" name="message" id="message"></textarea>
+                  <label class="form__label" for="message">Сообщение</label>
+                </div>
+                <button class="form__btn btn btn--blue" type="submit">Отправить</button>
+              </form>
+              <button class="popup-form__btn popup__close" type="button" aria-label="Зыкрыть">
+                <svg class="popup__close-icon" width="13" height="13">
+                  <use xlink:href="assets/images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/imask.min.js"></script>
+    <script src="assets/scripts/accordion.min.js"></script>
+    <script src="assets/scripts/swiper-bundle.min.js"></script>
+    <script src="assets/scripts/medium-zoom.min.js"></script>
+    <script src="assets/scripts/focus-visible.min.js"></script>
+    <script src="assets/scripts/smoothscroll.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.breadcrumbs__list {
+    display: flex;
+    align-items: center;
+    @include list;
+}
+.breadcrumbs__item {
+    &:not(:last-of-type) {
+        margin-right: 10px;
+    }
+}
+.breadcrumbs__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-white;
+
+    svg {
+        margin-left: 10px;
+    }
+}
